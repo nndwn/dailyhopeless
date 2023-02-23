@@ -13,7 +13,7 @@ const Lang = ({children, data}) => {
 export const query = graphql`
 query($id: String) {
   langJson(id: {eq: $id}) {
-    name
+    lang
   }
 }
 `
