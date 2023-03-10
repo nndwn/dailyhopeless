@@ -4,7 +4,7 @@ import Layout from "../components/layout/layout";
 
 const Lang = ({children, data}) => {
     return(
-        <Layout pagepage={data.langJson.name} >
+        <Layout lang={data.langJson.lang} >
             {children}
         </Layout>
     )

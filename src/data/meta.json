@@ -1,16 +1,12 @@
 [{
-    "lang": "en",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras non ex tempus, dignissim urna non, sagittis ex. Vestibulum feugiat cursus tincidunt. Nullam ultricies turpis nunc, nec luctus nulla consequat vitae.",
-    "keyword":"Japan, Messenger, Talk, LINE, text, message, sms, call, phone, free, voip",
+    "En": [{
+        "description": "Create your website look professional, elegant, and responsive. We are indie developers with daily hopeless.",
+        "keyword":"developer website, create website, sell theme template, , ui design, blog, create ecommerce, , website design"
+    }],
+    "Id": [{
+        "description": "Membuat website mu terlihat profesional, anggun, dan responsif. Kami adalah Pengembang Indie dengan harian tanpa harapan.",
+        "keyword":"developer website, create website, sell theme template, , ui design, blog, create ecommerce, , website design"
+    }],
     "image": "./images/dailyhopeless.jpg",
-    "color": "#dbb600"
-},
-{
-    "lang": "id",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras non ex tempus, dignissim urna non, sagittis ex. Vestibulum feugiat cursus tincidunt. Nullam ultricies turpis nunc, nec luctus nulla consequat vitae.",
-    "keyword":"Japan, Messenger, Talk, LINE, text, message, sms, call, phone, free, voip",
-    "image": "./images/dailyhopeless.jpg",
-    "color": "#dbb600"
-}
-
-]
+    "color": "#FFD400"
+}]
