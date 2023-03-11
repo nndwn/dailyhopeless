@@ -4,7 +4,10 @@
 module.exports = {
   siteMetadata: {
     title: `dailyhopeless`,
-    siteUrl: `https://www.yourdomain.tld`
+    siteUrl: `https://www.dailyhopeless.nndwn.com`,
+    "color": "#FFD400",
+    "location": "batam",
+    "country": "indonesia"
   },
   flags: {
     DEV_SSR: false

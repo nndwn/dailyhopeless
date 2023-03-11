@@ -10,3 +10,13 @@ exports.createPages = ({ actions, graphql }) => {
         toPath: `/en/`,
       })
 }
+// exports.createSchemaCustomization = ({ actions, graphql }) => {
+//   const { createTypes } = actions
+//   const typeDefs = `
+//   type Lang implements Node {
+//     all: AllLang @link(by: "services")
+//   }
+
+//   `
+//   createTypes(typeDefs)
+// }
