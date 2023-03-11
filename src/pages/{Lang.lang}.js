@@ -27,7 +27,7 @@ query($id: String) {
     menu {
       name
     }
-    Headline {
+    headline {
       h1
       h2
     }
@@ -36,8 +36,12 @@ query($id: String) {
     contact {
       button
       image {
-        childrenImageSharp {
-          gatsbyImageData(formats: JPG, placeholder: BLURRED)
+        childImageSharp {
+          gatsbyImageData(
+            quality: 80, 
+            placeholder: BLURRED, 
+            formats: JPG,
+          )
         }
       }
       text
@@ -49,8 +53,12 @@ query($id: String) {
       icon
       title
       image {
-        childrenImageSharp {
-          gatsbyImageData(placeholder: BLURRED, formats: JPG)
+        childImageSharp {
+          gatsbyImageData(
+            quality: 80, 
+            placeholder: BLURRED, 
+            formats: JPG,
+          )
         }
       }
     }
@@ -59,11 +67,16 @@ query($id: String) {
       link
       name
     }
-    Slide {
+    slide {
       alt
       image {
-        childrenImageSharp {
-          gatsbyImageData(placeholder: BLURRED, formats: JPG)
+        childImageSharp {
+          gatsbyImageData(
+            formats: JPG
+            quality: 80
+            placeholder: BLURRED
+            layout: FULL_WIDTH
+          )
         }
       }
     }

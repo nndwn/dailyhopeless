@@ -5,9 +5,21 @@ exports.createPages = ({ actions, graphql }) => {
     const { createRedirect } = actions
     createRedirect({
         fromPath: `/`,
-        isPermanent: true,
         redirectInBrowser: true,
         toPath: `/en/`,
+        conditions: {
+          country: [`us`, `gb`],
+          language: [`en`]
+        }
+      })
+      createRedirect({
+        fromPath: `/`,
+        redirectInBrowser: true,
+        toPath: `/id/`,
+        conditions: {
+          country: [`id`, `in`],
+          language: [`id`]
+        }
       })
 }
 // exports.createSchemaCustomization = ({ actions, graphql }) => {

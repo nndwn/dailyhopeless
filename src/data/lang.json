@@ -3,20 +3,20 @@
         "lang": "id",
         "language": "indonesia",
         "description": "Membuat website mu terlihat profesional, anggun, dan responsif. Kami adalah Pengembang Indie dengan harian tanpa harapan.",
-        "keyword":"developer website, create website, sell theme template, , ui design, blog, create ecommerce, , website design",
+        "keyword":"developer website, create website, sell theme template,ui design, blog, create ecommerce, , website design",
         "banner": "./images/dailyhopeless.jpg",
         "menu" : [
             {"name":"perihal"},
             {"name": "Layanan"},
             {"name": "Kontak"} 
         ],
-        "Headline": [
+        "headline": [
             {
                 "h1": "Dan Terjadi lagi",
-                "h2": "kisah lama yang terulang kembali"
+                "h2": "kisah lama yang terulang kembali."
             }
         ],
-        "Slide" : [
+        "slide" : [
             {
                 "image": "./images/slide1.jpg",
                 "alt": "slide1"
@@ -89,20 +89,20 @@
         "lang": "en",
         "language": "English",
         "description": "Create your website look professional, elegant, and responsive. We are indie developers with daily hopeless.",
-        "keyword":"developer website, create website, sell theme template, , ui design, blog, create ecommerce, , website design",
+        "keyword":"developer website, create website, sell theme template,ui design, blog, create ecommerce, , website design",
         "banner": "./images/dailyhopeless.jpg",
         "menu" : [
             {"name":"about"},
             {"name": "services"},
             {"name": "contact"} 
         ],
-        "Headline": [
+        "headline": [
             {
                 "h1": "here we go again",
-                "h2": "make people's lives simple"
+                "h2": "make people's lives simple."
             }
         ],
-        "Slide" : [
+        "slide" : [
             {
                 "image": "./images/slide1.jpg",
                 "alt": "slide1"
