@@ -11,7 +11,16 @@ const Lang = ({children, data}) => {
     )
 }
 export const Head = ({data}) => (
-  <Seo data={data.lang}/>
+  <>
+    <Seo data={data.lang}/>
+    <Html data={data.lang}/>
+  </>
+)
+
+const Html = ({children, data}) => (
+  <html lang={data.lang}>
+     {children}
+  </html>
 )
 
 export const query = graphql`
