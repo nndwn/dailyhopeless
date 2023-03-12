@@ -20,6 +20,7 @@ const Headline = ({data}) => {
                             image={getImage(node.image)}
                             alt= {node.alt}
                             className="mvImg"
+                            loading="eager"
                         />
                     </li>
                 </Fragment>

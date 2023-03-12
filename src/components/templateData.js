@@ -10,6 +10,8 @@ const TemplateData = () => {
                   color
                   location
                   country
+                  email
+                  author
                 }
               }
         }

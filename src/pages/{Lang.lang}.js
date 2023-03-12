@@ -47,32 +47,33 @@ query($id: String) {
       image {
         childImageSharp {
           gatsbyImageData(
-            quality: 80, 
-            placeholder: BLURRED, 
-            formats: JPG,
+            quality: 80
+            placeholder: BLURRED
+            formats: JPG
+            layout: FULL_WIDTH
           )
         }
       }
       text
+      alt
     }
     services {
       alt
       credit
       description
-      icon
       title
+      icon
       image {
         childImageSharp {
           gatsbyImageData(
-            quality: 80, 
-            placeholder: BLURRED, 
-            formats: JPG,
+            quality: 100
+            placeholder: BLURRED
+            formats: JPG
           )
         }
       }
     }
     social {
-      icon
       link
       name
     }
@@ -89,6 +90,7 @@ query($id: String) {
         }
       }
     }
+    footer
   }
 }
 `

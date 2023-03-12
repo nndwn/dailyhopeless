@@ -7,7 +7,9 @@ module.exports = {
     siteUrl: `https://www.dailyhopeless.nndwn.com`,
     "color": "#FFD400",
     "location": "batam",
-    "country": "indonesia"
+    "country": "indonesia",
+    "email": "dailyhopeless.dev@gmail.com",
+    "author": "nndwn",
   },
   flags: {
     DEV_SSR: false
