@@ -54,6 +54,7 @@
             {
                 "title":"ecommerce",
                 "description" : "Kami juga melayani pembuatan ecommerce atau kita sebut situs jual beli online, kamu bisa lihat situs jual beli online yang telah kami buat sebelumnya.",
+                "image": "./images/image_4.jpg",
                 "alt": "image_4",
                 "icon": "bucket",
                 "credit": "Photo by charlesdeluvio unsplash"
@@ -86,7 +87,7 @@
             }
             
     ],
-    "footer": "dibuat dengan"
+    "footer": "Dibuat dengan"
     },
     {
         "lang": "en",

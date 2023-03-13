@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { useState } from "react";
 import { Link } from "gatsby";
 import { graphql,useStaticQuery } from "gatsby";
 import Logo from "../logo";
@@ -16,6 +16,10 @@ const Header = ({data}) => {
             }
         }
     `)
+    const [toggle, setToggle] = useState(false)
+    const show = () => {
+        setToggle(!toggle);
+      };
     const lang = query.allLang.nodes
     return(
         <div className="nav container-fluid position-lg-fixed p-0 bg-lg-white z-1000 position-absolute top">
@@ -34,27 +38,26 @@ const Header = ({data}) => {
                             li="d-inline-block"
                         />
                         <div className="d-flex justify-content-end flex-grow-1 flex-basis-0" id="lang">
-                            <div className="d-flex align-items-center cursor-pointer dropmenu items-center">
+                            <div className="d-flex align-items-center cursor-pointer dropmenu items-center" onClick={show} tabIndex={0} onKeyDown={show} role='button'>
                                 <Icons
                                     icon= "language"
                                     className="fill-lg-dark fill-white"
                                     size= {25}
                                 />
-                                <span
-                                    className="uppercase font-custom self-center fs-4 pl-2  pl-2 pr-3 color-white color-lg-dark">
+                                <span className="uppercase font-custom self-center fs-4 pl-2  pl-2 pr-3 color-white color-lg-dark">
                                     {data.lang}
                                 </span>
                             </div>
                         </div>
                     </nav>
+                    {toggle && (
+                        <ul className="lang-menu">
+                            {lang.map(node => (
+                                <li key={node.id}><Link to={`/${node.lang}`}>{node.lang}</Link></li>
+                            ))}                            
+                        </ul>
+                    )}
                 </header>
-                <ul className="lang-menu">
-                    {lang.map(node => (
-                        <Fragment key={node.id}>
-                            <li><Link to={"/"+`${node.lang}`}>{node.lang}</Link></li>
-                        </Fragment>
-                    ))}                            
-                </ul>
             </div>
     )
 }
