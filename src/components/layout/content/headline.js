@@ -12,7 +12,7 @@ const Headline = ({data}) => {
         setScrollPosition(scroll);
     }
     useEffect(() => {
-        window.addEventListener('scroll', handleScroll);
+        window.addEventListener('scroll', handleScroll,{ passive: true });
     }, [])
     return(
     <section id="mvArea" className={`position-relative d-lg-flex items-lg-center ${scrollPosition ? "resize": ""}`}  style={{overflow:"hidden"}}>

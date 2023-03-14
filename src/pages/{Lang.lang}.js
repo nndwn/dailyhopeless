@@ -47,7 +47,7 @@ query($id: String) {
       image {
         childImageSharp {
           gatsbyImageData(
-            quality: 80
+            quality: 50
             placeholder: BLURRED
             formats: JPG
             layout: FULL_WIDTH
@@ -66,7 +66,7 @@ query($id: String) {
       image {
         childImageSharp {
           gatsbyImageData(
-            quality: 100
+            quality: 50
             placeholder: BLURRED
             formats: JPG
           )
