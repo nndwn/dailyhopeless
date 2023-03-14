@@ -10,7 +10,7 @@ const Button = ({name, pop, icon, link, iconsize}) => (
                     icon={icon}
                 /> 
         </a>
-        { pop !== null ? 
+        { link === "#" ? 
         <div id="Nopages" className="position-absolute popleft px-2 py-3 bg-white opacity-0">
             <span>{pop}</span>
         </div>

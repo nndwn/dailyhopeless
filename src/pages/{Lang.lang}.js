@@ -35,6 +35,7 @@ query($id: String) {
     }
     menu {
       name
+      link
     }
     headline {
       h1
@@ -63,6 +64,7 @@ query($id: String) {
       description
       title
       icon
+      link
       image {
         childImageSharp {
           gatsbyImageData(

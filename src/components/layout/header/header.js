@@ -5,7 +5,7 @@ import Logo from "../logo";
 import Nav from "../nav";
 import Icons from "../icons";
 
-const Header = ({data}) => {
+const Header = ({data, scroll}) => {
     const query = useStaticQuery(graphql`
         query {
             allLang {
@@ -24,7 +24,7 @@ const Header = ({data}) => {
     return(
         <div className="nav container-fluid position-lg-fixed p-0 bg-lg-white z-1000 position-absolute top">
             <header className="mx-lg-9 mx-3 position-relative">
-                    <nav className="d-flex items-center py-3">
+                    <nav className={`d-flex items-center py-3 ${scroll ? "resize": ""}`}>
                         <Logo 
                             link={data.lang}
                             div = "d-flex justify-content-start flex-grow-1 flex-basis-0"

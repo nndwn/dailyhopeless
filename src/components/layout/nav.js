@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect, useState } from "react";
+import React, { Fragment, useEffect} from "react";
 
 const Nav = ({data, ul, li}) => {
     const navigation = () => {
@@ -43,7 +43,7 @@ const Nav = ({data, ul, li}) => {
         {data.menu.map(node => (
             <Fragment key={node.name}>
                 <li className={li}>
-                    <a href={`#${node.name}`}>{node.name}</a>
+                    <a href={`#${node.link}`}>{node.name}</a>
                 </li>
             </Fragment>
         ))}

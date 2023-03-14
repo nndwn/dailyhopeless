@@ -6,9 +6,9 @@
         "keyword":"developer website, create website, sell theme template,ui design, blog, create ecommerce, , website design",
         "banner": "./images/dailyhopeless.jpg",
         "menu" : [
-            {"name":"perihal"},
-            {"name": "Layanan"},
-            {"name": "Kontak"} 
+            {"name":"perihal", "link":"mainTitleArea"},
+            {"name": "Layanan", "link": "services"},
+            {"name": "Kontak", "link": "contact"} 
         ],
         "headline": [
             {
@@ -33,7 +33,8 @@
                 "image": "./images/image_1.jpg",
                 "alt": "image_1",
                 "icon": "paintbucket",
-                "credit": "Photo by domenico loia unsplash"
+                "credit": "Photo by domenico loia unsplash",
+                "link":"#"
             },
             {
                 "title":"Desain UI",
@@ -41,7 +42,8 @@
                 "image": "./images/image_2.jpg",
                 "alt": "image_2",
                 "icon": "penvector",
-                "credit": "Photo by pankaj patel unsplash"
+                "credit": "Photo by pankaj patel unsplash",
+                "link":"#"
             },
             {
                 "title":"Blog",
@@ -49,7 +51,8 @@
                 "image": "./images/image_3.jpg",
                 "alt": "image_3",
                 "icon": "doc",
-                "credit": "Photo by Super Snapper unsplash"
+                "credit": "Photo by Super Snapper unsplash",
+                "link":"blog.dailyhopeless.com"
             },
             {
                 "title":"ecommerce",
@@ -57,7 +60,8 @@
                 "image": "./images/image_4.jpg",
                 "alt": "image_4",
                 "icon": "bucket",
-                "credit": "Photo by charlesdeluvio unsplash"
+                "credit": "Photo by charlesdeluvio unsplash",
+                "link": "#"
             }
         ],
         "textbutton": "Selengkapnya",
@@ -96,9 +100,9 @@
         "keyword":"developer website, create website, sell theme template,ui design, blog, create ecommerce, , website design",
         "banner": "./images/dailyhopeless.jpg",
         "menu" : [
-            {"name":"about"},
-            {"name": "services"},
-            {"name": "contact"} 
+            {"name":"about", "link":"mainTitleArea"},
+            {"name": "services", "link":"services"},
+            {"name": "contact", "link":"contact"} 
         ],
         "headline": [
             {
@@ -123,7 +127,8 @@
                 "image": "./images/image_1.jpg",
                 "alt": "image_1",
                 "icon": "paintbucket",
-                "credit": "Photo by domenico loia unsplash"
+                "credit": "Photo by domenico loia unsplash",
+                "link": "#"
             },
             {
                 "title":"UI Design",
@@ -131,7 +136,8 @@
                 "image": "./images/image_2.jpg",
                 "alt": "image_2",
                 "icon": "penvector",
-                "credit": "Photo by pankaj patel unsplash"
+                "credit": "Photo by pankaj patel unsplash",
+                "link": "#"
             },
             {
                 "title":"Blog",
@@ -139,7 +145,8 @@
                 "image": "./images/image_3.jpg",
                 "alt": "image_3",
                 "icon": "doc",
-                "credit": "Photo by Super Snapper unsplash"
+                "credit": "Photo by Super Snapper unsplash",
+                "link": "blog.dailyhopeless.com"
             },
             {
                 "title":"ecommerce",
@@ -147,7 +154,8 @@
                 "image": "./images/image_4.jpg",
                 "alt": "image_4",
                 "icon": "bucket",
-                "credit": "Photo by charlesdeluvio unsplash"
+                "credit": "Photo by charlesdeluvio unsplash",
+                "link": "#"
             }
         ],
         "textbutton": "More details",

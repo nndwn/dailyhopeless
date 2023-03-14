@@ -5,14 +5,14 @@ import Icons from "../icons";
 
 const Services = ({data}) => {
     return (
-        <section className=" maincontent">
+        <section className=" maincontent" id="services">
         {data.services.map((node, index) =>{
             let oddevent =  index % 2 === 0 
             return (
             <div className={oddevent ?"bg-grey-20": "" } key={node.title}>
                 <div className="content py-8">
                     <div className="mx-lg-9 mx-3 d-flex position-relative py-9 flex-wrap">
-                        <div className={`datatext col-lg-5 col-12 d-flex flex-column justify-content-center order-2 ${oddevent ?" order-lg-1 pr-7": " pl-7"}` }>
+                        <div className={`datatext col-lg-5 col-12 d-flex flex-column justify-content-center order-2 ${oddevent ?" order-lg-1 pr-lg-7": " pl-lg-7"}` }>
                             <div className="mb-6">
                                 <h1 className="font-custom fs-9 my-3">{node.title}</h1>
                                 <p className="truncate color-grey">{node.description}</p>
@@ -21,7 +21,7 @@ const Services = ({data}) => {
                                 name={data.textbutton}
                                 pop ={data.popbutton}
                                 icon = "more"
-                                link = "#"
+                                link = {node.link}
                                 iconsize= {16}
                             />
                         </div>

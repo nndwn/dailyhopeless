@@ -6,7 +6,7 @@ import NavMobile from "./navmobile";
 import Contact from "./contact";
 
 
-const Main =({data}) => {
+const Main =({data, scroll}) => {
     const [widthscreen, setWidthscreen] = useState(true)
     const width = () => {
         const widthOut =  window.outerWidth
@@ -17,7 +17,7 @@ const Main =({data}) => {
     },[])
     return(
     <main>
-        <Headline data={data}/>
+        <Headline data={data} scroll={scroll}/>
         <About data={data}/>
         {widthscreen  && (<NavMobile data={data}/>)}
         <Services data={data}/>
