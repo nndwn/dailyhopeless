@@ -4,7 +4,7 @@
 module.exports = {
   siteMetadata: {
     title: `dailyhopeless`,
-    siteUrl: `https://www.dailyhopeless.nndwn.com`,
+    siteUrl: `https://www.dailyhopeless.com`,
     "color": "#FFD400",
     "location": "batam",
     "country": "indonesia",
