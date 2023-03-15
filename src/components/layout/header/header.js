@@ -36,7 +36,7 @@ const Header = ({data, scroll}) => {
                             data={data}
                             ul="navigationPC navigation capitalize font-custom d-lg-block fs-4 capitalize d-none position-relative text-center list-style-none"
                             li="d-inline-block"
-                        />
+                        /> 
                         <div className="d-flex justify-content-end flex-grow-1 flex-basis-0" id="lang">
                             <div className="d-flex align-items-center cursor-pointer dropmenu items-center" onClick={show} tabIndex={0} onKeyDown={show} role='button'>
                                 <Icons
