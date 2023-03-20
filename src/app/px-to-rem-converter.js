@@ -1,4 +1,4 @@
-import React, { useEffect, useState,use } from "react";
+import React, { useEffect, useState } from "react";
 import Css from "../components/rootCss";
 
 const PxtoRem = () => {
