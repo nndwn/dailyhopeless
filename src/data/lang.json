@@ -4,7 +4,6 @@
         "language": "indonesia",
         "description": "Membuat website mu terlihat profesional, anggun, dan responsif. Kami adalah Pengembang Indie dengan harian tanpa harapan.",
         "keyword":"developer website, create website, sell theme template,ui design, blog, create ecommerce, , website design",
-        "banner": "./images/dailyhopeless.jpg",
         "menu" : [
             {"name":"perihal", "link":"mainTitleArea"},
             {"name": "Layanan", "link": "services"},
@@ -91,14 +90,14 @@
             }
             
     ],
-    "footer": "Dibuat dengan"
+    "footer": "Dibuat dengan",
+    "notfound": "begitu gelap, tidak ada apapun disini <br/> terkadang jika kita tersesat<br/> mungkin kita hanya lupa ..."
     },
     {
         "lang": "en",
         "language": "English",
         "description": "Create your website look professional, elegant, and responsive. We are indie developers with daily hopeless.",
         "keyword":"developer website, create website, sell theme template,ui design, blog, create ecommerce, , website design",
-        "banner": "./images/dailyhopeless.jpg",
         "menu" : [
             {"name":"about", "link":"mainTitleArea"},
             {"name": "services", "link":"services"},
@@ -184,5 +183,6 @@
                 "link": "https://www.twitter.com/nndwn"
             }
     ],
-    "footer": "made with"
+    "footer": "made with",
+    "notfound": "So dark, Nothing in here, <br/> sometimes if we get lost, <br/> maybe we just forget ..."
 }]

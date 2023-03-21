@@ -1,6 +1,7 @@
 "use strict"
 
-exports.createPages = async ({ actions, graphql }) => {
+
+exports.createPages = async ({ actions, graphql, reporter }) => {
 
     const { createRedirect, createPage } = actions
     createRedirect({
@@ -27,6 +28,26 @@ exports.createPages = async ({ actions, graphql }) => {
         context: {},
         defer: true,
       })
+      const y = await graphql(
+        `query {
+          allLang{
+            nodes {
+              lang
+            }
+          }
+        }
+        `
+      )
+
+      y.data.allLang.nodes.forEach( node => {
+        createPage({
+          path: `/${node.lang}/notfound`,
+          component: require.resolve("./src/templates/notfound.js"),
+          context: {},
+          defer: true,
+        })
+        
+      });
 }
 
 

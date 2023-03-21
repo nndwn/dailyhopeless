@@ -24,7 +24,7 @@ const Footer = ({data}) => {
                     {
                         data.social.map(node => (
                             <li key={node.name} className="mx-2">
-                                <a href={node.link}>
+                                <a href={node.link} aria-label={node.name}>
                                     <Icons 
                                         icon={node.name}
                                         size={30}

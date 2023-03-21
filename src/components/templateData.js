@@ -12,6 +12,7 @@ const TemplateData = () => {
                   country
                   email
                   author
+                  banner
                 }
               }
         }

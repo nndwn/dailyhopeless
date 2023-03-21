@@ -7,7 +7,7 @@ export const onRenderBody = ({ setHeadComponents }) => {
       href="/static/anton-d1b9af350e094aacd3974a0da3b8a1ac.woff2"
       as="font"
       type="font/woff2"
-      crossOrigin="anonymous"
+      crossOrigin=""
       key="anton"
     />
   ])

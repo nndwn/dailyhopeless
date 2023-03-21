@@ -10,6 +10,7 @@ module.exports = {
     "country": "indonesia",
     "email": "dailyhopeless.dev@gmail.com",
     "author": "nndwn",
+    "banner": "/dailyhopeless.jpg"
   },
   flags: {
     DEV_SSR: false
