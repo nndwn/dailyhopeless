@@ -4,6 +4,8 @@ import { graphql,useStaticQuery } from "gatsby";
 import Logo from "../logo";
 import Nav from "../nav";
 import Icons from "../icons";
+import { css } from "@emotion/react";
+import { mq } from "../../rootCss";
 
 const Header = ({data, scroll}) => {
     const query = useStaticQuery(graphql`
@@ -26,11 +28,30 @@ const Header = ({data, scroll}) => {
             <header className="mx-lg-9 mx-3 position-relative">
                     <nav className={`d-flex items-center py-3 ${scroll ? "resize": ""}`}>
                         <Logo 
+                            size= {35}
                             link={data.lang}
-                            div = "d-flex justify-content-start flex-grow-1 flex-basis-0"
-                            circle= "fill-lg-yellow fill-white"
-                            path = "fill-dark"
-                            h1= "pl-3 uppercase font-custom fs-5 color-white color-lg-dark"
+                            style= {css`
+                                display: flex;
+                                justify-content: flex-start;
+                                flex: 1 0 0;
+                                align-items: center;
+                                circle {
+                                    fill: var(--white);
+                                }
+                                h1 {
+                                    margin-left: 1rem;
+                                    font-size: 1.5rem;
+                                    color: var(--white);
+                                }
+                                ${mq[2]}{
+                                    & circle {
+                                        fill:var(--yellow);
+                                    }
+                                    & h1 {
+                                        color:var(--dark);
+                                    }
+                                }
+                            `}
                         />
                         <Nav 
                             data={data}

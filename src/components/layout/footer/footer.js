@@ -2,6 +2,7 @@ import React from "react";
 import Logo from "../logo";
 import Icons from "../icons";
 import TemplateData from "../../templateData";
+import { css } from "@emotion/react";
 
 const Footer = ({data}) => {
     const {
@@ -14,11 +15,25 @@ const Footer = ({data}) => {
     return(
         <footer className="mt-9">
             <div className="d-flex justify-content-center flex-column items-center">
-                <Logo 
-                    div="d-flex bg-yellow py-2 px-3 mb-7"
-                    circle="fill-dark" 
-                    path="fill-yellow"
-                    h1="pl-3 uppercase font-custom fs-5 color-dark"
+                <Logo
+                    link={data.lang}
+                    size={35}
+                    style={css`
+                        display: flex;
+                        background-color:var(--yellow);
+                        padding: 0.5rem 1rem;
+                        margin-bottom: 2.5rem;
+                        circle {
+                            fill: var(--dark);
+                        }
+                        path {
+                            fill: var(--yellow);
+                        }
+                        h1 {
+                            font-size: 1.5rem;
+                            margin-left: 1rem;
+                        }
+                    `}
                 />
                 <ul className="list-style-none d-flex my-4">
                     {

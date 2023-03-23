@@ -91,7 +91,8 @@
             
     ],
     "footer": "Dibuat dengan",
-    "notfound": "begitu gelap, tidak ada apapun disini <br/> terkadang jika kita tersesat<br/> mungkin kita hanya lupa ..."
+    "notfound": {"name": "404",
+                "text":"begitu gelap, tidak ada apapun disini"}
     },
     {
         "lang": "en",
@@ -184,5 +185,7 @@
             }
     ],
     "footer": "made with",
-    "notfound": "So dark, Nothing in here, <br/> sometimes if we get lost, <br/> maybe we just forget ..."
+    "notfound": {
+        "name":"404", 
+        "text":"So dark, Nothing in here, <br/> sometimes if we get lost, <br/> maybe we just forget ..." }
 }]

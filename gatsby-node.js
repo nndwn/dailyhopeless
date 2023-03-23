@@ -8,17 +8,13 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
         fromPath: `/`,
         redirectInBrowser: true,
         toPath: `/en/`,
-        conditions: {
-          country: [`us`, `gb`],
-          language: [`en`]
-        }
       })
       createRedirect({
         fromPath: `/`,
         redirectInBrowser: true,
         toPath: `/id/`,
         conditions: {
-          country: [`id`, `in`],
+          country: [`id`],
           language: [`id`]
         }
       })
@@ -28,26 +24,28 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
         context: {},
         defer: true,
       })
-      const y = await graphql(
-        `query {
-          allLang{
-            nodes {
-              lang
-            }
-          }
-        }
-        `
-      )
+      // const y = await graphql(
+      //   `query {
+      //     allLang{
+      //       nodes {
+      //         lang
+      //       }
+      //     }
+      //   }
+      //   `
+      // )
 
-      y.data.allLang.nodes.forEach( node => {
-        createPage({
-          path: `/${node.lang}/notfound`,
-          component: require.resolve("./src/templates/notfound.js"),
-          context: {},
-          defer: true,
-        })
+      // y.data.allLang.nodes.forEach( node => {
+      //   createPage({
+      //     path: `/${node.lang}/notfound`,
+      //     component: require.resolve("./src/templates/notfound.js"),
+      //     context: {
+      //       language: node,
+      //     },
+      //     defer: true,
+      //   })
         
-      });
+      // });
 }
 
 

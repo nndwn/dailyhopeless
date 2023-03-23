@@ -1,8 +1,8 @@
 import React from "react";
 import TemplateData from "../templateData";
+import { firstLetter } from "../utils";
 
 const Seo = ({children, title, robots, keyword, desc, lang,language}) => {
-    const capitalize = str => (str.charAt(0).toUpperCase() + str.slice(1).toLowerCase())
     const {
         title : titledefault,
         siteUrl,
@@ -20,7 +20,7 @@ const Seo = ({children, title, robots, keyword, desc, lang,language}) => {
     return (
         <>
             <Html data={seo.lang}/>
-            <title>{capitalize(seo.title)}</title>
+            <title>{firstLetter(seo.title)}</title>
             {/* standart seo */}
             <meta name="description" content={seo.desc} />
             <meta property="keyword" content={seo.keyword}/>
