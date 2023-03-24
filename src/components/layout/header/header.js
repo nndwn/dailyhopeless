@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "gatsby";
 import { graphql,useStaticQuery } from "gatsby";
 import Logo from "../logo";
-import Nav from "../nav";
+import Nav, { Currentline } from "../nav";
 import Icons from "../icons";
 import { css } from "@emotion/react";
 import { mq } from "../../rootCss";
@@ -29,7 +29,6 @@ const Header = ({data, scroll}) => {
                     <nav className={`d-flex items-center py-3 ${scroll ? "resize": ""}`}>
                         <Logo 
                             size= {35}
-                            link={data.lang}
                             style= {css`
                                 display: flex;
                                 justify-content: flex-start;
@@ -54,10 +53,28 @@ const Header = ({data, scroll}) => {
                             `}
                         />
                         <Nav 
-                            data={data}
-                            ul="navigationPC navigation capitalize font-custom d-lg-block fs-4 capitalize d-none position-relative text-center list-style-none"
-                            li="d-inline-block"
-                        /> 
+                            menu={data.menu}
+                            style={css`
+                                display: none;
+                                ${mq[2]}{
+                                    width: 26.3rem;
+                                    font-family: var(--font-custom);
+                                    display: block;
+                                    text-transform: capitalize;
+                                    text-align: center;
+                                    font-size: 1.25rem;
+                                    position: relative;
+                                    li {
+                                        margin-right: 5rem;
+                                        display: inline-block;
+                                    }
+                                    li:nth-last-of-type(-n+2) {
+                                        margin-right: 0;
+                                    }
+                                }
+                            `}> 
+                            <Currentline style={{left: "40px", width: "50px"}}/>
+                        </Nav>
                         <div className="d-flex justify-content-end flex-grow-1 flex-basis-0" id="lang">
                             <div className="d-flex align-items-center cursor-pointer dropmenu items-center" onClick={show} tabIndex={0} onKeyDown={show} role='button'>
                                 <Icons

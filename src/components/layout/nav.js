@@ -1,17 +1,29 @@
-import React, { Fragment} from "react";
+import React, { Fragment} from "react"
+import { css } from "@emotion/react";
 
-const Nav = ({data, ul, li}) => {
+const Nav = ({menu, children, style}) => {
     return(
-    <ul className={ul}>
-        {data.menu.map(node => (
+    <ul css={style}>
+        {menu.map(node => (
             <Fragment key={node.name}>
-                <li className={li}>
+                <li>
                     <a href={`#${node.link}`}>{node.name}</a>
                 </li>
             </Fragment>
         ))}
-        <li className="currentLine" style={{left: "40px", width: "50px"}}></li>
+        {children}
     </ul>
 )}
+
+export const Currentline = ({style}) => (
+    <li className="currentLine" style={style} css={css`
+        background-color: var(--yellow);
+        bottom: 0;
+        height: 0.25rem;
+        position: absolute;
+        transition: all .2s ease-in-out;
+        
+    `}></li>
+) 
 
 export default Nav

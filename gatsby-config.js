@@ -10,7 +10,25 @@ module.exports = {
     "country": "indonesia",
     "email": "dailyhopeless.dev@gmail.com",
     "author": "nndwn",
-    "banner": "/dailyhopeless.jpg"
+    "banner": "/dailyhopeless.jpg",
+    "socialmedia": [
+      {
+        "name": "github",
+        "link": "https://github.com/nndwn"
+      },
+      {
+        "name": "instagram",
+        "link": "https://www.instagram.com/nndwn_"
+      },
+      {
+        "name": "facebook",
+        "link": "https://www.facebook.com/nndwn/"
+      },
+      {
+        "name": "twitter",
+        "link": "https://www.twitter.com/nndwn"
+      }
+    ]
   },
   flags: {
     DEV_SSR: false

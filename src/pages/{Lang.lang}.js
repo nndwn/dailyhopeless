@@ -68,7 +68,7 @@ const Lang = ({children, data}) => {
                       if (data.lang.lang ===  "en") {
                           document.querySelector('.navMobile .currentLine').style.cssText = 'left: 16px; width: 50px';
                       } else {
-                          document.querySelector('.navMobile .currentLine').style.cssText = 'left: 20px; width: 55px';
+                          document.querySelector('.navMobile .currentLine').style.cssText = 'left: 0; width: 55px';
                       }
                       navactive(1)    
               }
@@ -153,10 +153,6 @@ query($id: String) {
         }
       }
     }
-    social {
-      link
-      name
-    }
     slide {
       alt
       image {
@@ -170,7 +166,6 @@ query($id: String) {
         }
       }
     }
-    footer
   }
 }
 `

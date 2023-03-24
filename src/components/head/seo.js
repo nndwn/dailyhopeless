@@ -24,14 +24,14 @@ const Seo = ({children, title, robots, keyword, desc, lang,language}) => {
             {/* standart seo */}
             <meta name="description" content={seo.desc} />
             <meta property="keyword" content={seo.keyword}/>
-            <meta name="title" content={seo.title}/>
+            <meta name="title" content={firstLetter(seo.title)}/>
             <meta name="robots" content={seo.robots}/>
             <meta name="language" content={seo.language}/>
             <meta name="msapplication-TileColor" content={color}/>
             <meta content={color} name="theme-color"/>
             <meta content={color} name="msapplication-navbutton-color"/>
             {/* og seo */}
-            <meta property="og:title" content={seo.title} />
+            <meta property="og:title" content={firstLetter(seo.title)} />
             <meta property="og:type" content="website" />
             <meta property="og:description" content={seo.desc} />
             <meta property="og:url" content={siteUrl}/>

@@ -4,7 +4,7 @@ import { Link } from "gatsby";
 import TemplateData from "../templateData";
 import { css } from "@emotion/react";
 
-const Logo = ({link, size, style}) => {
+const Logo = ({ size, style}) => {
     const { title } = TemplateData()
     return (
         <div css={style}  >

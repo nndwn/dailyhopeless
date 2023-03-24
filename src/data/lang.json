@@ -70,29 +70,7 @@
             "text": "Kami selalu ada untukmu, ya kamu yang telah membaca ini mohon tekan tombolnya",
             "button": "Kontak Kami",
             "alt": "pankaj-patel-Fi-GJaLRGKc-unsplash"
-        }],
-        "social" : [
-            {
-                "name": "github",
-                "link": "https://github.com/nndwn"
-            },
-            {
-                "name": "instagram",
-                "link": "https://www.instagram.com/nndwn_"
-            },
-            {
-                "name": "facebook",
-                "link": "https://www.facebook.com/nndwn/"
-            },
-            {
-                "name": "twitter",
-                "link": "https://www.twitter.com/nndwn"
-            }
-            
-    ],
-    "footer": "Dibuat dengan",
-    "notfound": {"name": "404",
-                "text":"begitu gelap, tidak ada apapun disini"}
+        }]
     },
     {
         "lang": "en",
@@ -165,27 +143,5 @@
             "text": "We always there for you,  yeah you are reading this please push button",
             "button": "contact us",
             "alt": "pankaj-patel-Fi-GJaLRGKc-unsplash"
-        }],
-        "social" : [
-            {
-                "name": "github",
-                "link": "https://github.com/nndwn"
-            },
-            {
-                "name": "instagram",
-                "link": "https://www.instagram.com/nndwn_"
-            },
-            {
-                "name": "facebook",
-                "link": "https://www.facebook.com/nndwn/"
-            },
-            {
-                "name": "twitter",
-                "link": "https://www.twitter.com/nndwn"
-            }
-    ],
-    "footer": "made with",
-    "notfound": {
-        "name":"404", 
-        "text":"So dark, Nothing in here, <br/> sometimes if we get lost, <br/> maybe we just forget ..." }
+        }]
 }]
