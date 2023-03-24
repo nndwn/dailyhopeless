@@ -111,7 +111,7 @@ export const Socialmedia = () => {
         </ul>
     )
 }
-const Footer = ({data}) => {
+const Footer = () => {
     return(
         <Footerr>
             <Logo

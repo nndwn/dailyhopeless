@@ -26,7 +26,7 @@ const NavMobile = ({data}) => (
                 position: relative;
                 li {
                     display: inline-block;
-                    opacity: .6;
+                    opacity: .8;
                     margin: 0 1.25rem;
                     padding: 0.5rem 0;
                 }
@@ -37,7 +37,7 @@ const NavMobile = ({data}) => (
                     opacity: 1;
                 }
             `}>
-        <Currentline style={{left: "0", width: "55px"}}/>
+        <Currentline/>
         </Nav>
     </nav>
 )

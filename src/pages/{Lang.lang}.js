@@ -8,6 +8,7 @@ import Footer from "../components/layout/footer/footer";
 
 const Lang = ({children, data}) => {
   const [scrollPosition, setScrollPosition] = useState(0)
+  console.log(scrollPosition)
   const navactive = (Indexli) => {
       const navAktivMobile = document.querySelectorAll('.navMobile li');
       for (let i = 0; i < navAktivMobile.length; i++) {
@@ -19,22 +20,21 @@ const Lang = ({children, data}) => {
       const handleScroll = () => {
           const scroll = window.scrollY
           setScrollPosition(scroll)
-          navigation()
+          //navigation()
       }
-      const navigation = () => {
+      const navigation = (s) => {
           const service = document.querySelector('#mainTitleArea');
           const serviceTop = service.offsetTop;
           const contact = document.querySelector('#contact');
           const contactTop = contact.offsetTop - 100;
-          if(window.outerWidth >= 992) {
-              if (window.scrollY >= serviceTop && window.scrollY <= contactTop  ) {
+              if ( s >= serviceTop && s <= contactTop  ) {
                   if (data.lang.lang ===  "en") {
                       document.querySelector('.currentLine').style.cssText = 'left:168px; width: 70px';
                   } else {
                       document.querySelector('.currentLine').style.cssText = 'left:178px; width: 66px';
                   }
                   
-              } else if (window.scrollY >= contactTop ){
+              } else if ( s >= contactTop ){
                   if (data.lang.lang ===  "en") {
                       document.querySelector('.currentLine').style.cssText = 'left: 317px; width: 62px';
                   } else {
@@ -47,36 +47,37 @@ const Lang = ({children, data}) => {
                       document.querySelector('.currentLine').style.cssText = 'left: 42px; width: 56px';
                   }
               }
-          }else{
-              if (window.scrollY >= serviceTop && window.scrollY <= contactTop  ) {
+              if ( s >= serviceTop && s <= contactTop  ) {
                       if (data.lang.lang ===  "en") {
-                          document.querySelector('.navMobile .currentLine').style.cssText = 'left:108px; width: 60px';
+                          document.querySelector('.navMobile .currentLine').style.cssText = 'left: 5.4rem; width: 4.2rem';
                       } else {
-                          document.querySelector('.navMobile .currentLine').style.cssText = 'left:116px; width: 65px';
+                          document.querySelector('.navMobile .currentLine').style.cssText = 'left:6rem; width: 4.1rem';
                       }
                       navactive(2)
                   } 
-                  else if (window.scrollY >= contactTop ){
+                  else if (s >= contactTop ){
                       if (data.lang.lang ===  "en") {
-                          document.querySelector('.navMobile .currentLine').style.cssText = 'left: 215px; width: 62px';
+                          document.querySelector('.navMobile .currentLine').style.cssText = 'left: 12.1rem;width:3.90rem';
                       } else {
-                          document.querySelector('.navMobile .currentLine').style.cssText = 'left: 222px; width: 55px';   
+                          document.querySelector('.navMobile .currentLine').style.cssText = 'left: 12.5rem; width:3.5rem';   
                       }
                       navactive(3)
                   } 
                   else {
                       if (data.lang.lang ===  "en") {
-                          document.querySelector('.navMobile .currentLine').style.cssText = 'left: 16px; width: 50px';
+                          document.querySelector('.navMobile .currentLine').style.cssText = 'left: 0; width: 2.9rem';
                       } else {
-                          document.querySelector('.navMobile .currentLine').style.cssText = 'left: 0; width: 55px';
+                          document.querySelector('.navMobile .currentLine').style.cssText = 'left: 0; width: 3.5rem';
                       }
                       navactive(1)    
               }
           }
-      }
-      window.addEventListener('scroll', handleScroll, { passive: true})
+      
+      navigation(scrollPosition)
+      window.addEventListener('scroll', handleScroll,{ passive: true})
       return () => {
           document.removeEventListener('scroll', handleScroll);
+          
         }
   })
     return(
@@ -88,7 +89,8 @@ const Lang = ({children, data}) => {
         </Layout>
     )
 }
-export const Head = ({data}) => {
+
+export const Head = ({data, scroll}) => {
   const s = data.lang
   return(
     <>
@@ -101,8 +103,6 @@ export const Head = ({data}) => {
     </>
   )
 }
-
-
 
 export const query = graphql`
 query($id: String) {

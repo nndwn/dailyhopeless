@@ -15,14 +15,13 @@ const Nav = ({menu, children, style}) => {
     </ul>
 )}
 
-export const Currentline = ({style}) => (
-    <li className="currentLine" style={style} css={css`
+export const Currentline = () => (
+    <li className="currentLine" css={css`
         background-color: var(--yellow);
         bottom: 0;
         height: 0.25rem;
         position: absolute;
-        transition: all .2s ease-in-out;
-        
+        transition: all .2s ease-in;
     `}></li>
 ) 
 

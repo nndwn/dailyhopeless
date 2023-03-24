@@ -4,17 +4,14 @@ import Seo from "../components/head/seo"
 import Logo from "../components/layout/logo"
 import { css } from "@emotion/react"
 
-
-const body = css`
-    background-color: var(--dark);
-    color: var(--white);
-`
 const notfound = css`
     display: flex;
     height: 100vh;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    color: var(--white);
+    background: var(--dark);
     p {
         font-size: 0.8rem;
         margin-bottom: 3rem;
@@ -48,9 +45,6 @@ const NotFoundPage = () => {
   )
 }
 
-const Body = ({children}) => {
-  return <body css={body}>{children}</body>
-}
 
 export default NotFoundPage
 
@@ -58,7 +52,7 @@ export const Head = ({data}) => (
   <>
       <Seo 
           robots="nofollow, noindex"
+          title= "404 Hopeless"
       />
-      <Body/>
   </>
 )
