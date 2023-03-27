@@ -14,7 +14,7 @@ const Logo = ({ size, style}) => {
             </svg>
             <h1 css = {css`
                 text-transform: uppercase;
-                font-family: var(--font-custom);
+                font-family: anton;
             `}>
                 <Link to="/">{title}</Link>
             </h1>

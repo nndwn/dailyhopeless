@@ -5,11 +5,10 @@ import Logo from "../logo";
 import Nav, { Currentline } from "../nav";
 import Icons from "../icons";
 import { css, keyframes } from "@emotion/react";
-import { mq, mx } from "../../rootCss";
+import { mq, mx, color } from "../../rootCss";
 
 
 const startHeader = keyframes`
-    
         0% {
         transform: translateY(-105%);
         }
@@ -25,7 +24,6 @@ const Header = ({data, scroll}) => {
     const [toggle, setToggle] = useState(false)
     return(
         <Navigation style={css`
-
             width: 100%;
             padding: 0;
             position: absolute;
@@ -40,10 +38,10 @@ const Header = ({data, scroll}) => {
                 }
             }
             ${mq[2]}{
-                background-color: var(--white);
+                background-color: ${color.white};
                 position: fixed;
                 animation:${startHeader} 2.5s;
-                box-shadow: 0 1px 0 0 var(--grey-20);
+                box-shadow: 0 1px 0 0 ${color.dark20};
                 opacity: .95;
                 header {
                     margin: 0 3rem;
@@ -65,19 +63,19 @@ const Header = ({data, scroll}) => {
                         flex: 1 0 0;
                         align-items: center;
                         circle {
-                            fill: var(--white);
+                            fill: ${color.white};
                         }
                         h1 {
                             margin-left: 1rem;
                             font-size: 1.5rem;
-                            color: var(--white);
+                            color: ${color.white};
                         }
                         ${mq[2]}{
                             & circle {
-                                fill:var(--yellow);
+                                fill:${color.yellow};
                             }
                             & h1 {
-                                color:var(--dark);
+                                color:${color.dark};
                             }
                         }
                     `}
@@ -88,13 +86,14 @@ const Header = ({data, scroll}) => {
                         display: none;
                         ${mq[2]}{
                             width: 26.3rem;
-                            font-family: var(--font-custom);
+                            font-family: anton;
                             display: block;
                             text-transform: capitalize;
                             text-align: center;
                             font-size: 1.25rem;
                             position: relative;
                             li {
+                                list-style: none;
                                 margin-right: 5rem;
                                 display: inline-block;
                             }
@@ -138,27 +137,27 @@ export const ButtonLanguage = ({toggle, set , data}) => {
                     content: "";
                     position: absolute;
                     right: 0;
-                    border-top: 3px solid var(--white);
+                    border-top: 3px solid ${color.white};
                     border-right: 3px solid transparent;
                     border-left: 3px solid transparent;
                 }
                 span {
                     text-transform: uppercase;
-                    font-family: var(--font-custom);
+                    font-family: anton;
                     text-align: center;
                     font-size: 1.25rem;
                     padding: 0 1rem 0 0.5rem;
-                    color: var(--white); 
-                    
+                    color: ${color.white}; 
+                    user-select: none;
                 }
             }
             ${mq[2]}{
                 & > div {
                     ::after {
-                        border-top: 3px solid var(--dark);
+                        border-top: 3px solid ${color.dark};
                     }
                     span {
-                        color: var(--dark);
+                        color: ${color.dark};
                     }
                 }
             }
@@ -167,9 +166,9 @@ export const ButtonLanguage = ({toggle, set , data}) => {
                 <Icons
                     icon= "language"
                     style={css`
-                        fill: var(--white);
+                        fill: ${color.white};
                         ${mq[2]}{
-                            fill: var(--dark);
+                            fill: ${color.dark};
                         }
                     `}
                     size= {25}
@@ -201,11 +200,11 @@ export const Menulanguage = ({toggle}) => {
                     position: absolute;
                     right: 0;
                     list-style: none;
-                    background-color: var(--white);
+                    background-color: ${color.white};
                     padding: 1rem 1.5rem;
                     text-align: center;
-                    border: 1px solid var(--dark);
-                    font-family: var(--font-custom);
+                    border: 1px solid ${color.dark};
+                    font-family: anton;
                     text-transform: uppercase;
                 `}>
                     {lang.map(node => (

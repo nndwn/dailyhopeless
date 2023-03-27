@@ -1,5 +1,6 @@
 import React, { Fragment} from "react"
 import { css } from "@emotion/react";
+import { color } from "../rootCss";
 
 const Nav = ({menu, children, style}) => {
     return(
@@ -17,7 +18,7 @@ const Nav = ({menu, children, style}) => {
 
 export const Currentline = () => (
     <li className="currentLine" css={css`
-        background-color: var(--yellow);
+        background-color: ${color.yellow};
         bottom: 0;
         height: 0.25rem;
         position: absolute;

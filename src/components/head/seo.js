@@ -2,7 +2,7 @@ import React from "react";
 import TemplateData from "../templateData";
 import { firstLetter } from "../utils";
 
-const Seo = ({children, title, robots, keyword, desc, lang,language}) => {
+const Seo = ({children, title, robots, keyword, desc, lang,language, path}) => {
     const {
         title : titledefault,
         siteUrl,
@@ -15,7 +15,8 @@ const Seo = ({children, title, robots, keyword, desc, lang,language}) => {
         keyword: keyword || null,
         desc: desc || null,
         lang : lang || "en" ,
-        language: language || "english"
+        language: language || "english",
+        path: path || null,
     }
     return (
         <>
@@ -39,6 +40,7 @@ const Seo = ({children, title, robots, keyword, desc, lang,language}) => {
             {/* twitter seo */}
             <meta name="twitter:card" content="summary_large_image" />
             <meta name="twitter:creator" content="@nndwn" />
+            <link rel="canonical" href={siteUrl+seo.path} />
         </>
     )
 }

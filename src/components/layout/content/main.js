@@ -10,7 +10,7 @@ const Main =({data, scroll}) => {
     return(
     <main>
         <Headline data={data} scroll={scroll}/>
-        <About data={data}/>
+        <About data={data} scroll={scroll}/>
         <NavMobile data={data}/>
         <Services data={data}/>
         <Contact data={data}/>

@@ -8,7 +8,6 @@ import Footer from "../components/layout/footer/footer";
 
 const Lang = ({children, data}) => {
   const [scrollPosition, setScrollPosition] = useState(0)
-  console.log(scrollPosition)
   const navactive = (Indexli) => {
       const navAktivMobile = document.querySelectorAll('.navMobile li');
       for (let i = 0; i < navAktivMobile.length; i++) {
@@ -79,7 +78,7 @@ const Lang = ({children, data}) => {
           document.removeEventListener('scroll', handleScroll);
           
         }
-  })
+  },[scrollPosition])
     return(
         <Layout page={data.lang}>
               <Header data={data.lang} scroll={scrollPosition} />
@@ -99,6 +98,7 @@ export const Head = ({data, scroll}) => {
         keyword ={s.keyword}
         lang = {s.lang}
         language = {s.language}
+        path={s.lang}
         />
     </>
   )

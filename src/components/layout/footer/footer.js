@@ -4,7 +4,7 @@ import Icons from "../icons";
 import TemplateData from "../../templateData";
 import { css } from "@emotion/react";
 import { graphql, useStaticQuery } from "gatsby";
-import { mq } from "../../rootCss";
+import { mq, color } from "../../rootCss";
 
 export const Footerr = ({children}) => {
     const {
@@ -35,7 +35,7 @@ export const Footerr = ({children}) => {
             }
             > div {
                 justify-content: center; 
-                box-shadow: 0 -1px 0 0 var(--grey-20);
+                box-shadow: 0 -1px 0 0 ${color.dark20};
                 padding: 1rem 0;
                 flex-direction: column;
             }
@@ -62,7 +62,9 @@ export const Footerr = ({children}) => {
                         <Icons 
                             icon="heart"
                             size={12}
-                            className="mx-1"
+                            style={css`
+                                margin: 0 0.25rem;
+                            `}
                         />
                          {author} 
                     </div>
@@ -118,14 +120,14 @@ const Footer = () => {
                 size={35}
                 style={css`
                     display: flex;
-                    background-color:var(--yellow);
+                    background-color: ${color.yellow};
                     padding: 0.5rem 1rem;
                     margin-bottom: 2.5rem;
                     circle {
-                        fill: var(--dark);
+                        fill: ${color.dark};
                     }
                     path {
-                        fill: var(--yellow);
+                        fill: ${color.yellow};
                     }
                     h1 {
                         font-size: 1.5rem;

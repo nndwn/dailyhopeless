@@ -1,27 +1,61 @@
 import React from 'react'
 import { Global, css } from '@emotion/react'
+import alpha from 'color-alpha'
+import font from '../../static/font/anton.woff2'
 
 const Css = ({children}) => (
     <>
         <Global styles = {css`
+            @font-face{
+                font-family:anton;
+                font-display: swap;
+                src:url(${font}) format("woff2");
+            }
             :root {
-                --white: rgb(255, 255, 255);
-                --dark: rgb(19, 19, 19);
-                --grey: rgba(19, 19, 19, 80%);
-                --grey-50: rgba(19, 19, 19, 50%);
-                --grey-20: rgba(19, 19, 19, 20%);
-                --yellow: rgb(255, 212, 0);
-                --red: rgb(255, 0, 50);
-                --blue:rgb(255, 0, 50);
                 --font-serif: serif;
                 --font-sans-serif: poppins,sans-serif;
-                --font-custom: anton;
                 }
+            *, :after, :before {
+                box-sizing: border-box;
+            }
+            @media (prefers-reduced-motion: no-preference){
+                :root {
+                    scroll-behavior: smooth;
+                }
+            }
+            body {
+                -webkit-font-smoothing: antialiased;
+                font-family: var(--font-sans-serif);
+                line-height: 1.6;
+                color: ${color.dark}
+            }
+            a{
+                color: inherit;
+                text-decoration: none;
+            }
+            h1,h2,h3,h4 {
+                font:inherit;
+            }
+            ul,h1,h2,h3,h4 {
+                padding: 0;
+            }
+            body, p, ul, h1, h2, h3,h4 {
+                margin: 0
+            }
         `}/>
         {children}
     </>
 )
 
+const dark = "#131313"
+export const color = {
+    white : "#fff",
+    dark : dark,
+    dark80 : alpha(dark, "80%"),
+    dark50 : alpha(dark, "50%"),
+    dark20 : alpha(dark,"20%"),
+    yellow : "#FFD400"
+}
 const breakpoints = [576, 768, 992, 1200]
 const breakpointsmax = [575, 767, 991, 1199]
 export const mx = breakpointsmax.map(bp => `@media (max-width: ${bp}px)`)

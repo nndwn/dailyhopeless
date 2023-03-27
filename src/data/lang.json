@@ -33,7 +33,7 @@
                 "alt": "image_1",
                 "icon": "paintbucket",
                 "credit": "Photo by domenico loia unsplash",
-                "link":"#"
+                "link":null
             },
             {
                 "title":"Desain UI",
@@ -42,7 +42,7 @@
                 "alt": "image_2",
                 "icon": "penvector",
                 "credit": "Photo by pankaj patel unsplash",
-                "link":"#"
+                "link":null
             },
             {
                 "title":"Blog",
@@ -60,7 +60,7 @@
                 "alt": "image_4",
                 "icon": "bucket",
                 "credit": "Photo by charlesdeluvio unsplash",
-                "link": "#"
+                "link": null
             }
         ],
         "textbutton": "Selengkapnya",
@@ -106,7 +106,7 @@
                 "alt": "image_1",
                 "icon": "paintbucket",
                 "credit": "Photo by domenico loia unsplash",
-                "link": "#"
+                "link": null
             },
             {
                 "title":"UI Design",
@@ -115,7 +115,7 @@
                 "alt": "image_2",
                 "icon": "penvector",
                 "credit": "Photo by pankaj patel unsplash",
-                "link": "#"
+                "link": null
             },
             {
                 "title":"Blog",
@@ -133,7 +133,7 @@
                 "alt": "image_4",
                 "icon": "bucket",
                 "credit": "Photo by charlesdeluvio unsplash",
-                "link": "#"
+                "link": null
             }
         ],
         "textbutton": "More details",

@@ -18,12 +18,12 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
           language: [`id`]
         }
       })
-      createPage({
-        path: "/px-to-rem-converter",
-        component: require.resolve("./src/app/px-to-rem-converter.js"),
-        context: {},
-        defer: true,
-      })
+      // createPage({
+      //   path: "/px-to-rem-converter",
+      //   component: require.resolve("./src/app/px-to-rem-converter.js"),
+      //   context: {},
+      //   defer: true,
+      // })
       // const y = await graphql(
       //   `query {
       //     allLang{

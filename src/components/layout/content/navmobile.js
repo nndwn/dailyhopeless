@@ -1,16 +1,16 @@
 import React from "react";
 import Nav, {Currentline} from "../nav";
 import { css } from "@emotion/react";
-import { mq } from "../../rootCss";
+import { mq, color } from "../../rootCss";
 
 const NavMobile = ({data}) => (
     <nav className="navMobile" css={css`
-        box-shadow: 0 1px 0 0 var(--grey-20);
+        box-shadow: 0 1px 0 0 ${color.dark20};
         overflow-x: hidden;
         position: sticky;
-        z-index: 11;
+        z-index: 49;
         top: 0;
-        background-color: var(--white);
+        background-color: ${color.white};
         text-transform: capitalize;
         text-align: center;
         ${mq[2]}{
@@ -21,7 +21,7 @@ const NavMobile = ({data}) => (
             menu={data.menu}
             style ={css`
                 display: inline-block;
-                font-family: var(--font-custom);
+                font-family: anton;
                 font-size: 1.25rem;
                 position: relative;
                 li {
