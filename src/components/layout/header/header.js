@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "gatsby";
-import { graphql,useStaticQuery } from "gatsby";
+import { graphql,useStaticQuery} from "gatsby";
 import Logo from "../logo";
 import Nav, { Currentline } from "../nav";
 import Icons from "../icons";
@@ -23,7 +23,8 @@ const startHeader = keyframes`
 const Header = ({data, scroll}) => {
     const [toggle, setToggle] = useState(false)
     return(
-        <Navigation style={css`
+        <Navigation
+        style={css`
             width: 100%;
             padding: 0;
             position: absolute;
@@ -111,13 +112,14 @@ const Header = ({data, scroll}) => {
     )
 }
 
-export const Navigation = ({children, style}) => (
+export const Navigation = ({children, style}) => {
+    return(
     <div css={style}>
         <header>
             {children}
         </header>
     </div>
-)
+)}
 
 export const ButtonLanguage = ({toggle, set , data}) => {
     const show = () => {

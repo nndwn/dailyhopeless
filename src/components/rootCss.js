@@ -27,7 +27,7 @@ const Css = ({children}) => (
                 -webkit-font-smoothing: antialiased;
                 font-family: var(--font-sans-serif);
                 line-height: 1.6;
-                color: ${color.dark}
+                color: ${color.dark};
             }
             a{
                 color: inherit;

@@ -1,5 +1,5 @@
 import React,{useEffect, useState} from "react";
-import { graphql } from 'gatsby'
+import { graphql} from 'gatsby'
 import Layout from "../components/layout/layout";
 import Seo from "../components/head/seo";
 import Header from "../components/layout/header/header";
@@ -7,6 +7,7 @@ import Main from "../components/layout/content/main";
 import Footer from "../components/layout/footer/footer";
 
 const Lang = ({children, data}) => {
+  
   const [scrollPosition, setScrollPosition] = useState(0)
   const navactive = (Indexli) => {
       const navAktivMobile = document.querySelectorAll('.navMobile li');
@@ -21,6 +22,7 @@ const Lang = ({children, data}) => {
           setScrollPosition(scroll)
           //navigation()
       }
+
       const navigation = (s) => {
           const service = document.querySelector('#mainTitleArea');
           const serviceTop = service.offsetTop;
@@ -89,7 +91,7 @@ const Lang = ({children, data}) => {
     )
 }
 
-export const Head = ({data, scroll}) => {
+export const Head = ({data}) => {
   const s = data.lang
   return(
     <>
@@ -101,6 +103,7 @@ export const Head = ({data, scroll}) => {
         path={s.lang}
         />
     </>
+   
   )
 }
 

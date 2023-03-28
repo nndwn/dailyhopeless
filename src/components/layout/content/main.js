@@ -8,7 +8,7 @@ import Contact from "./contact";
 
 const Main =({data, scroll}) => {
     return(
-    <main>
+    <main >
         <Headline data={data} scroll={scroll}/>
         <About data={data} scroll={scroll}/>
         <NavMobile data={data}/>

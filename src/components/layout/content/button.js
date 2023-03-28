@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, {useState, useEffect, useRef} from "react";
 import Icons from "../icons";
 import { css } from "@emotion/react";
 import { color } from "../../rootCss";
@@ -6,8 +6,6 @@ import { firstLetter } from "../../utils";
 
 const Button = ({name, pop, icon, link, iconsize}) => {
     const [show, setShow] = useState(false)
-  
-
     useEffect (() => {
         function listing () {
             setShow(false)
@@ -62,8 +60,10 @@ const Button = ({name, pop, icon, link, iconsize}) => {
             }
         }
     `}>
-       <a href={link} id="nopage"  onClick={() => {
-            setShow(!show)
+       <a href={link} id="nopage"  onClick={e => {
+            setShow(true)
+            e.preventDefault()
+            console.log("preventdefault aktive")
         }}>
             <span>{name}</span>
                 <Icons 
