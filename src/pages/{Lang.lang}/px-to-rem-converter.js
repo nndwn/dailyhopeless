@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Css from "../components/rootCss";
+import Css from "../../components/rootCss";
 
 const PxtoRem = () => {
     let [size, setSize] = useState(16)

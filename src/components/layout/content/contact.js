@@ -20,7 +20,6 @@ const Contact = ({data}) => {
                 .text {
                     display: flex;
                     justify-content: center;
-                    padding: 3rem;
                     flex-direction: column;
                     align-items: center;
                     p {
@@ -61,6 +60,7 @@ const Contact = ({data}) => {
                 & > div {
                     margin: 0 3rem;
                     .text {
+                        padding: 3rem;
                         flex-direction: row;
                         p {
                            width: 33.33333333%;
