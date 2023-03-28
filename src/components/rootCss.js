@@ -2,6 +2,7 @@ import React from 'react'
 import { Global, css } from '@emotion/react'
 import alpha from 'color-alpha'
 import font from '../../static/font/anton.woff2'
+import poppins from '../../static/font/poppins_400.woff2'
 
 const Css = ({children}) => (
     <>
@@ -10,6 +11,11 @@ const Css = ({children}) => (
                 font-family:anton;
                 font-display: swap;
                 src:url(${font}) format("woff2");
+            }
+            @font-face{
+                font-family:poppins;
+                font-display: swap;
+                src:url(${poppins}) format("woff2");
             }
             :root {
                 --font-serif: serif;
