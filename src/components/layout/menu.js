@@ -2,7 +2,7 @@ import React, { Fragment} from "react"
 import { css } from "@emotion/react";
 import { color } from "../rootCss";
 
-const Nav = ({menu, children, style}) => {
+const Menu = ({menu, children, style}) => {
     return(
     <ul css={style}>
         {menu.map(node => (
@@ -26,4 +26,4 @@ export const Currentline = () => (
     `}></li>
 ) 
 
-export default Nav
+export default Menu

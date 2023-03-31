@@ -48,7 +48,7 @@ const NotFoundPage = () => {
 
 export default NotFoundPage
 
-export const Head = ({data}) => (
+export const Head = () => (
   <>
       <Seo 
           robots="nofollow, noindex"

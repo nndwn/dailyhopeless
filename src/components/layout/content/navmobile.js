@@ -1,5 +1,5 @@
 import React from "react";
-import Nav, {Currentline} from "../nav";
+import Menu, {Currentline} from "../menu";
 import { css } from "@emotion/react";
 import { mq, color } from "../../rootCss";
 
@@ -17,7 +17,7 @@ const NavMobile = ({data}) => (
             display: none;
         }
     `}>
-        <Nav
+        <Menu
             menu={data.menu}
             style ={css`
                 display: inline-block;
@@ -38,7 +38,7 @@ const NavMobile = ({data}) => (
                 }
             `}>
         <Currentline/>
-        </Nav>
+        </Menu>
     </nav>
 )
 

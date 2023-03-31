@@ -1,13 +1,12 @@
-import React,{useEffect, useState} from "react";
+import React,{useEffect, useState, useRef} from "react";
 import { graphql} from 'gatsby'
 import Layout from "../components/layout/layout";
 import Seo from "../components/head/seo";
-import Header from "../components/layout/header/header";
+import Header from "../templates/dailyhopeless/header";
 import Main from "../components/layout/content/main";
 import Footer from "../components/layout/footer/footer";
 
 const Lang = ({children, data}) => {
-  
   const [scrollPosition, setScrollPosition] = useState(0)
   const navactive = (Indexli) => {
       const navAktivMobile = document.querySelectorAll('.navMobile li');
@@ -78,7 +77,6 @@ const Lang = ({children, data}) => {
       window.addEventListener('scroll', handleScroll,{ passive: true})
       return () => {
           document.removeEventListener('scroll', handleScroll);
-          
         }
   },[scrollPosition])
     return(

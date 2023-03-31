@@ -1,6 +1,6 @@
 import React from "react";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
-import Button from "./button";
+import Button from "../button";
 import Icons from "../icons";
 import { css } from "@emotion/react";
 import { mq, color } from "../../rootCss";

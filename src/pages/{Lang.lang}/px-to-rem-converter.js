@@ -1,7 +1,11 @@
 import React, { useEffect, useState } from "react";
-import Css from "../../components/rootCss";
+import Layout from "../../components/layout/layout";
+import Seo from "../../components/head/seo";
+import Header from "../../templates/pxtorem/header";
+import { css } from "@emotion/react";
+import { graphql } from "gatsby";
 
-const PxtoRem = () => {
+const PxtoRem = ({data}) => {
     let [size, setSize] = useState(16)
     const [pixel, setPixel] = useState('')
     const [rem, setRem] = useState('')
@@ -32,11 +36,38 @@ const PxtoRem = () => {
     
 })
     return (
-        <Css>
+        <Layout>
+            <Header data={data.lang.menu}/>
             <input id="pixel" defaultValue={pixel} type="text" ></input>
             <input id="rem"  defaultValue={rem} type="text" ></input>
             <input id="rs" defaultValue={size} type="text"  ></input>
-        </Css>
+        </Layout>
     )
 }
+
+
+export const Head = () => {
+    <>
+        <Seo/>
+        <body css={css`
+            .active {
+                overflow: hidden;
+                header {
+                    margin-right: 1rem;
+                }
+            } 
+        `}> </body>
+    </>
+}
+
+export const query = graphql`
+query($id: String) {
+  lang(id: {eq: $id}) {
+    menu {
+      name
+      link
+    }
+  }
+}`
+
 export default PxtoRem
