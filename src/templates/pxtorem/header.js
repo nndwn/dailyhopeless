@@ -1,14 +1,20 @@
-import React,{useRef} from "react";
+import React,{useRef, useEffect, useState} from "react";
 import { Navigation, ButtonLanguage, Menulanguage } from "../../components/layout/navigation";
-import { sNav, sNavLogo, sNavEnd, sNavLangMenu} from "./style";
+import { sNav, sNavLogo, sNavEnd} from "./style";
 import Logo from "../../components/layout/logo";
 import Darkmode from "../../components/layout/darkmode";
 import { useComponentVisible } from "../../components/layout/button";
 import { BurgerIcon, Outmenu } from "../../components/layout/outmenu";
 
-const Header = ({data}) => { 
+const Header = ({data}) => {
+    const [lang, setLang] = useState(false)
+    const [menu, setMenu] = useState(false)
+    const refLang = useRef(null)
+    const refMenu = useRef(null)
+    useEffect(()=> {
+
+    },[])
     const {ref, isComponentVisible, setIsComponentVisible } = useComponentVisible(false)
-    const nav = useRef (null)
     return(
         <Navigation style={sNav}>
             <nav>
@@ -24,9 +30,12 @@ const Header = ({data}) => {
                             set ={setIsComponentVisible} 
                         />
                     </div>
-                    <BurgerIcon/>
+                    <BurgerIcon 
+                        toggle={menu}
+                        set={setMenu}
+                    />
                 </div>
-                <Outmenu data={data}/>
+                <Outmenu menu={data.menu} lang={data.lang}/>
             </nav>
             <Menulanguage 
                 toggle={isComponentVisible}
@@ -35,5 +44,6 @@ const Header = ({data}) => {
         </Navigation>
     )
 }
+
 
 export default Header

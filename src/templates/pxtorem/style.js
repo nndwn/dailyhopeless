@@ -9,6 +9,7 @@ export const sNav = css`
     background-color: ${color.dark};
     header {
         margin: 0 1rem;
+        transition: all 200ms ease-in;
         nav {
             display: flex;
             align-items: center;
@@ -41,6 +42,7 @@ export const sNavEnd = css`
     display: flex;
     justify-content: flex-end;
     flex: 1 0 0;
+    z-index: 49;
     .darkmode {
         margin-right: 0.5rem
     }

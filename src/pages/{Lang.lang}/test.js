@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useRef} from "react";
 import Menu from "../../components/layout/menu";
 import { graphql } from "gatsby";
 import Darkmode from "../../components/layout/darkmode";
@@ -7,14 +7,25 @@ import { UseDarkmode } from "../../components/layout/darkmode";
 
 
 const Testaja = ({data}) => {
+  const test = useRef(null)
     return (
       <>
+        <Testdua test={test}/>
         <Menu menu={data.lang.menu} />
         <Darkmode style={css`
           align-items: center;
         `}/>
       </>
     )
+}
+
+const Testdua = ({test}) => {
+  
+  return (
+    <>
+      <div ref={test}></div>
+    </>
+  )
 }
 export const Head = () => {
 

@@ -1,14 +1,99 @@
-import React from "react";
+import React, { Fragment, useRef, useEffect} from "react";
 import { css } from "@emotion/react";
 import { color } from "../rootCss";
+import Logo from "./logo";
+import { menuListAni } from "./animation";
+import TemplateData from "../templateData";
 
-export const Outmenu = ({data}) => {
+export const Outmenu = ({menu, lang}) => {
+    const {siteUrl} = TemplateData()
+    const animateli = useRef()
+    console.log(animateli.current)
+    useEffect(()=> {
+       
+    })
     return (
-        <div></div>
+        <div css={css`
+            position: fixed;
+            right: 0;
+            top:0;
+            bottom: 0;
+            opacity: 0;
+            background-color: ${color.dark};
+            width: 16.5rem;
+            transform: translateX(100%);
+            transition: all 200ms ease-in;
+            > div {
+                right: 1rem;
+                bottom: 1rem;
+                top: 6rem;
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                justify-content: space-between;
+                left: 0;
+                ul {
+                    list-style: none;
+                    font-family: anton;
+                    text-transform: capitalize;
+                    color: ${color.white};
+                    font-size: 1.5rem;
+                    margin-left: 1rem;
+                }
+            }
+            body.active & {
+                opacity: 1;
+                transform: none;
+                li {
+                    opacity: 0
+                }
+                .add {
+                    opacity: 1;
+                    animation: ${menuListAni} 300ms ease-in;
+                }
+
+            }
+        `}>
+            <div>
+                <ul>
+                    {menu.map((node, i )=> {
+                    
+                        return(
+                        <Fragment key={node.name}>
+                            <li ref={animateli}>
+                                <a href={`${siteUrl}/${lang}/#${node.link}`}>{node.name}</a>
+                            </li>
+                        </Fragment>
+                    )})}
+                </ul>
+                <Logo
+                    size={27}
+                    style={css`
+                        margin-left: 1rem;
+                        display: flex;
+                        align-items: center;
+                        svg {
+                            circle {
+                                fill: ${color.white}
+                            }
+                            path {
+                                fill: ${color.dark}
+                            }
+                            
+                        }
+                        h1 {
+                            margin-left: 0.5rem;
+                            font-size: 1.25rem;
+                            color: ${color.white};
+                        }
+                    `}
+                />
+            </div>
+        </div>
     )
 }
 
-export const BurgerIcon = () => {
+export const BurgerIcon = ({set, toggle}) => {
     const burger = css`
         border-radius: 1.5px;
         height: 0.125rem;
@@ -18,7 +103,14 @@ export const BurgerIcon = () => {
         transition: all 200ms ease-in;
     `
     const burgerAktive = () => {
-        document.body.classList.toggle("active")
+        if (toggle && true) {
+            set(false)
+            document.body.classList.remove("active")
+        }else {
+            set(true)
+            document.body.classList.add("active")
+        }
+        
     } 
     return (
         <div tabIndex={0} role="button" onClick={burgerAktive} onKeyDown={burgerAktive} css={css`

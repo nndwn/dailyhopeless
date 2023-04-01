@@ -3,7 +3,7 @@
         "lang": "id",
         "language": "indonesia",
         "description": "Membuat website mu terlihat profesional, anggun, dan responsif. Kami adalah Pengembang Indie dengan harian tanpa harapan.",
-        "keyword":"developer website, create website, sell theme template,ui design, blog, create ecommerce, , website design",
+        "keyword":"developer website, create website, sell theme template,ui design, blog, create ecommerce, website design",
         "menu" : [
             {"name":"perihal", "link":"mainTitleArea"},
             {"name": "Layanan", "link": "services"},
@@ -76,7 +76,7 @@
         "lang": "en",
         "language": "English",
         "description": "Create your website look professional, elegant, and responsive. We are indie developers with daily hopeless.",
-        "keyword":"developer website, create website, sell theme template,ui design, blog, create ecommerce, , website design",
+        "keyword":"developer website, create website, sell theme template,ui design, blog, create ecommerce, website design",
         "menu" : [
             {"name":"about", "link":"mainTitleArea"},
             {"name": "services", "link":"services"},

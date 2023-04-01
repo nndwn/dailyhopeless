@@ -37,7 +37,18 @@ const PxtoRem = ({data}) => {
 })
     return (
         <Layout>
-            <Header data={data.lang.menu}/>
+            <style>
+                {`
+                    body.active {
+                        overflow: hidden;
+                    }
+                    body.active header {
+                        margin-right: 1rem;
+                       
+                    }
+                `}
+            </style>
+            <Header data={data.lang}/>
             <input id="pixel" defaultValue={pixel} type="text" ></input>
             <input id="rem"  defaultValue={rem} type="text" ></input>
             <input id="rs" defaultValue={size} type="text"  ></input>
@@ -49,14 +60,6 @@ const PxtoRem = ({data}) => {
 export const Head = () => {
     <>
         <Seo/>
-        <body css={css`
-            .active {
-                overflow: hidden;
-                header {
-                    margin-right: 1rem;
-                }
-            } 
-        `}> </body>
     </>
 }
 
@@ -67,6 +70,7 @@ query($id: String) {
       name
       link
     }
+    lang
   }
 }`
 
