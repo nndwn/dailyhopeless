@@ -1,4 +1,4 @@
-import "./static/style.css"
+
 
 // // in gastby-browser.js
 // exports.shouldUpdateScroll = ({

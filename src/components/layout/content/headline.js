@@ -32,7 +32,7 @@ const Headline = ({data, scroll}) => {
             h2 {
                 font-size: 3rem;
                 white-space: nowrap;
-                font-family: anton;
+                font-family: anton, sans-serif;
                 text-transform: capitalize;
             }
             h3{
@@ -102,7 +102,7 @@ const Headline = ({data, scroll}) => {
                 animation: ${starttext} 5s;
                 color: ${color.dark};
                 content: "${title.toUpperCase()}";
-                font-family: anton;
+                font-family: anton,sans-serif;
                 font-size: 3rem;
                 line-height: 3.333;
                 padding: 2rem 2rem 0 0;
