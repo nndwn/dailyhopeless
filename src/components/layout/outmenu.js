@@ -1,16 +1,23 @@
-import React, { Fragment, useRef, useEffect} from "react";
+import React, { Fragment, useEffect } from "react";
 import { css } from "@emotion/react";
 import { color } from "../rootCss";
 import Logo from "./logo";
 import { menuListAni } from "./animation";
 import TemplateData from "../templateData";
 
-export const Outmenu = ({menu, lang}) => {
+export const Outmenu = ({menu, lang, toggle}) => {
     const {siteUrl} = TemplateData()
-    const animateli = useRef()
-    console.log(animateli.current)
     useEffect(()=> {
-       
+        const liAnimate = document.querySelectorAll("#animate li")
+        {for (let i = 0; i < liAnimate.length ; i++){
+            if (toggle && true) {
+                setTimeout(() => {
+                liAnimate[0 + i].classList.add("add");
+              }, i * 200)
+              liAnimate[i].classList.remove("add") 
+             }
+          } 
+        }
     })
     return (
         <div css={css`
@@ -55,12 +62,11 @@ export const Outmenu = ({menu, lang}) => {
             }
         `}>
             <div>
-                <ul>
-                    {menu.map((node, i )=> {
-                    
+                <ul id = "animate">
+                    {menu.map((node)=> {
                         return(
                         <Fragment key={node.name}>
-                            <li ref={animateli}>
+                            <li >
                                 <a href={`${siteUrl}/${lang}/#${node.link}`}>{node.name}</a>
                             </li>
                         </Fragment>

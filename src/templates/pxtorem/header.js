@@ -35,7 +35,7 @@ const Header = ({data}) => {
                         set={setMenu}
                     />
                 </div>
-                <Outmenu menu={data.menu} lang={data.lang}/>
+                <Outmenu menu={data.menu} lang={data.lang} toggle={menu}/>
             </nav>
             <Menulanguage 
                 toggle={isComponentVisible}
