@@ -9,7 +9,7 @@ const Css = ({children}) => (
         <Global styles = {css`
             @font-face{
                 font-family:anton;
-                font-display: swap;
+                font-display: fallback;
                 src:url(${font}) format("woff2");
             }
             @font-face{
@@ -47,6 +47,9 @@ const Css = ({children}) => (
             }
             body, p, ul, h1, h2, h3,h4 {
                 margin: 0
+            }
+            input, label {
+                outline: 0;
             }
         `}/>
         {children}

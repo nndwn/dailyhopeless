@@ -1,42 +1,88 @@
-import React,{ useState, useEffect} from "react";
+import React from "react";
+import Icons from "../../../components/layout/icons";
+import { sectionOne } from "../style";
 
 const Converter = () => {
-    let [size, setSize] = useState(16)
-    const [pixel, setPixel] = useState('')
-    const [rem, setRem] = useState('')
-    useEffect(() => {
-        const rem = document.getElementById('rem')
-        const pixel = document.getElementById('pixel')
-        const rs = document.getElementById('rs')
-        //let t = pixel.value = rem.value * size
-        rs.oninput = event => {
-            setSize(event.target.value)
-            setPixel(pixel.value = rem.value * event.target.value)
+    const [size, setSize] = React.useState(16)
+    const [rem, setRem] = React.useState(null)
+    const [pixel, setPixel] = React.useState(null)
+    const remValue = React.useRef(null)
+    const pixelValue = React.useRef(null)
+    const rootSize = React.useRef(null)
+
+    React.useEffect(() => {
+        rootSize.current.oninput = event => {
+            let rootSizeValue = event.target.value.slice(0, 2)
+            setSize(rootSizeValue)
+            pixelValue.current.value = (remValue.current.value === "" ? "" : remValue.current.value * rootSizeValue) 
+
         }
-        pixel.oninput = event => {
-            let r = parseFloat ((pixel.value / size).toFixed(3) )
-            if (!isNaN(pixel.value * 1) && !(event.target.value === "")){
-                setRem (parseFloat(rem.value = r))
-                setPixel(parseFloat(pixel.value))
+        pixelValue.current.oninput = event => {
+            let r = parseFloat ((event.target.value / size).toFixed(3) )
+            if (!isNaN(event.target.value) && !(event.target.value === null)){
+                setPixel (event.target.value )
+                remValue.current.value = (pixelValue.current.value ==="" ? "" : parseFloat(r))
             }
 
         }
-        rem.oninput = event => {
-            let p = rem.value * size
-            if (!isNaN(rem.value * 1) && !(event.target.value === "")){
-                setPixel(parseFloat(pixel.value = p))
-                setRem (parseFloat(rem.value)) 
+        remValue.current.oninput = event => {
+            let p = event.target.value * size
+            if (!isNaN(event.target.value) && !(event.target.value === null)){
+                setRem(event.target.value)
+                pixelValue.current.value = (remValue.current.value ==="" ? "" : parseFloat(p))    
             }
+      
         }
     
-})
+},[size,rem,pixel])
     return (
-        <>
-            <input id="pixel" defaultValue={pixel} type="text" ></input>
-            <input id="rem"  defaultValue={rem} type="text" ></input>
-            <input id="rs" defaultValue={size} type="text"  ></input>
-        </>
+        <section css={sectionOne}>
+            <div className="contain">
+                <h1>px to rem</h1>
+                <div>
+                    <Inputfield ref={pixelValue} defaultValue={null} name={"px"} className={"input"} type="number"/>
+                    <div>
+                        <Icons
+                            icon={"arrow-left-right"}
+                            size= {25}
+                        />
+                    </div>
+                    <Inputfield ref={remValue} defaultValue={null} name={"rem"} className={"input"} type="number"/>
+                </div>
+                <p>Calculation based on a root font-size
+            <ToastTop text={"add two number"}/>
+            <input type="text" ref={rootSize} defaultValue={size}  inputmode="numeric" maxLength={2}/>
+            <Icons
+                icon={"pencil-square"}
+                size={13}
+            />
+            of pixel.
+            </p>
+            </div>
+            <ScrollAnimate/>
+        </section>
     )
 }
 
 export default Converter
+
+export const Inputfield = React.forwardRef ((props, ref) => {
+    return (
+        <div className={props.className}>
+            <input ref={ref} defaultValue={props.defaultValue} type={props.type}/>
+            <span>{props.name}</span> 
+        </div>
+    )
+}
+)
+export const ToastTop = ({active, text}) => {
+    return <span className={active}>{text}</span>
+}
+
+export const ScrollAnimate = () => {
+    return (
+        <div>
+            <span>scroll</span>
+        </div>
+    )
+} 

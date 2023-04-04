@@ -65,3 +65,108 @@ export const sNavEnd = css`
         }
     }
 `
+export const sectionOne = css`
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button { 
+         -webkit-appearance: none; 
+        margin: 0; 
+        }
+    input[type=number] { 
+        -moz-appearance: textfield;
+        appearance: textfield;
+        margin: 0;
+        }
+    .contain {
+        width: 100%;
+        margin: 0 5rem;
+        h1 {
+            text-align: center;
+            font-family: anton, sans-serif;
+            text-transform: uppercase;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        > div {
+            
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            div:nth-of-type(2) {
+                align-items: center;
+            }
+            > div {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                margin-bottom: 1rem;
+            }
+            .input {
+                span, input {
+                    border: 1px solid ${color.dark20}
+                }
+                span {
+                    display: flex;
+                    align-items: center;
+                    border-left: none;
+                    font-family: anton, sans-serif;
+                    text-transform: uppercase;
+                    padding: 0 1rem;
+                    font-size: 2rem;
+                    border-top-right-radius: 0.31rem;
+                    border-bottom-right-radius: 0.31rem;
+                }
+                input {
+                    flex: 1 1 auto;
+                    height: 4rem;
+                    border-right: none;
+                    border-top-left-radius: 0.31rem;
+                    border-bottom-left-radius: 0.31rem;
+                    font-size: 2rem;
+                    width: 100%;
+                    padding: 1rem; 
+                }
+            }
+        }
+    }
+    p {
+        text-align: center; 
+        font-size: 0.81rem;
+        align-items: center;
+        margin-top: 2rem;
+        color: ${color.dark50};
+        input {
+            -webkit-appearance: none;
+            border:none;
+            width: 1.5rem;
+            color: ${color.dark50};
+        }
+        svg {
+            margin-right: 0.5rem;
+            fill : ${color.dark50};
+        }
+
+    }
+    ${mq[2]} {
+        .contain {
+            margin: 0 14rem;
+            h1 {
+                margin-bottom: 3rem;
+            }
+            p {
+                margin-top: 3rem;
+            }
+            >div {
+               div:nth-of-type(1),div:nth-of-type(3){
+                width: 41.66666667%;
+               }
+               div:nth-of-type(2) {
+                width: 8.33333333%;
+               }
+            }
+        }
+    }
+`
