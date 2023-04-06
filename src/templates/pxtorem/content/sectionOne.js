@@ -1,6 +1,7 @@
 import React from "react";
 import Icons from "../../../components/layout/icons";
 import { sectionOne } from "../style";
+import { ScrollAnimate } from "../../../components/layout/scrollfollow";
 
 const Converter = () => {
     const [size, setSize] = React.useState(16)
@@ -51,7 +52,7 @@ const Converter = () => {
                 </div>
                 <p>Calculation based on a root font-size
             <ToastTop text={"add two number"}/>
-            <input type="text" ref={rootSize} defaultValue={size}  inputmode="numeric" maxLength={2}/>
+            <input type="text" ref={rootSize} defaultValue={size}  inputMode="numeric" maxLength={2}/>
             <Icons
                 icon={"pencil-square"}
                 size={13}
@@ -79,10 +80,3 @@ export const ToastTop = ({active, text}) => {
     return <span className={active}>{text}</span>
 }
 
-export const ScrollAnimate = () => {
-    return (
-        <div>
-            <span>scroll</span>
-        </div>
-    )
-} 

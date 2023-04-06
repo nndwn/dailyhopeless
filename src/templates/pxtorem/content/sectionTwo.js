@@ -1,6 +1,6 @@
 import React from "react";
 
-const TextArtikel = () => {
+const TextArtikel = ({data}) => {
     return
 }
 

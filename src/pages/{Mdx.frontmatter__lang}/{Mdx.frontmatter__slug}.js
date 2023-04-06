@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Layout from "../../components/layout/layout";
 import Seo from "../../components/head/seo";
 import Header from "../../templates/pxtorem/header";
@@ -21,8 +21,8 @@ const PxtoRem = ({data}) => {
                     }
                 `}
             </style>
-            <Header data={data.lang}/>
-            <Main/>
+            <Header data={data.mdx.frontmatter}/>
+            <Main data={data.mdx}/>
             <Footer/>
         </Layout>
     )
@@ -37,13 +37,16 @@ export const Head = () => (
 )
 
 export const query = graphql`
-query($id: String) {
-  lang(id: {eq: $id}) {
-    menu {
-      name
-      link
+query ($e: String) {
+  mdx (id: {eq: $e}){
+    frontmatter {
+      date(formatString: "MMMM DD, YYYY")
+      lang
+      slug
+      title
     }
-    lang
+    id
+    excerpt
   }
 }`
 

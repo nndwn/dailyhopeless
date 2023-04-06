@@ -4,7 +4,7 @@ export const onRenderBody = ({ setHeadComponents }) => {
   setHeadComponents([
     <link
       rel="preload"
-      href="/static/anton-d1b9af350e094aacd3974a0da3b8a1ac.woff2"
+      href="/static/anton-507ccc5241e97adce21a09c900218c60.woff2"
       as="font"
       type="font/woff2"
       crossOrigin=""

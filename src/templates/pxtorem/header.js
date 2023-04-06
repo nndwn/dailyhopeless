@@ -5,8 +5,10 @@ import Logo from "../../components/layout/logo";
 import Darkmode from "../../components/layout/darkmode";
 import { useComponentVisible } from "../../components/layout/button";
 import { Outmenu } from "../../components/layout/outmenu";
+import { Datamenu } from "../../components/layout/menu";
 
 const Header = ({data}) => {
+    const { menu } = Datamenu()[1]
     const {ref, isComponentVisible, setIsComponentVisible } = useComponentVisible(false)
     return(
         <Navigation style={sNav}>
@@ -24,7 +26,7 @@ const Header = ({data}) => {
                         />
                     </div>     
                 <Outmenu 
-                    menu={data.menu}
+                    menu={menu}
                     lang={data.lang}
                 />
                 </div>

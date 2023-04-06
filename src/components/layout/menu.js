@@ -1,6 +1,7 @@
 import React, { Fragment} from "react"
 import { css } from "@emotion/react";
 import { color } from "../rootCss";
+import { graphql, useStaticQuery } from "gatsby";
 
 const Menu = ({menu, children, style}) => {
     return(
@@ -25,5 +26,21 @@ export const Currentline = () => (
         transition: all .2s ease-in;
     `}></li>
 ) 
+
+export const Datamenu = () => {
+    const query = useStaticQuery(graphql`
+        query {
+            allLang {
+                nodes {
+                    menu {
+                    link
+                    name
+                    }
+                }
+            }
+        }
+    `)
+    return query.allLang.nodes
+}
 
 export default Menu
