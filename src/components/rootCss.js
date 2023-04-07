@@ -54,6 +54,14 @@ const Css = ({children}) => (
             svg {
                 fill: inherit
             }
+            ::selection {
+                background-color: ${color.dark};
+                color: ${color.white};
+            }
+            ::-moz-selection {
+                background-color: ${color.dark};
+                color: ${color.white};
+            }
         `}/>
         {children}
     </>

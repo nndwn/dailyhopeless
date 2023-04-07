@@ -26,6 +26,11 @@ const PxtoRem = ({data}) => {
                         background-color: ${color.dark};
                         fill: ${color.white}
                     }
+                    @media (min-width: 992px) {
+                        body.active {
+                            padding-right: 17px;
+                        }
+                    }
                 `}
             </style>
             <Header data={frontmatter}/>
