@@ -16,6 +16,7 @@ const PxtoRem = ({data}) => {
                 {`
                     body.active {
                         overflow: hidden;
+                   
                     }
                     body.active header {
                         margin-right: 1rem;
@@ -24,13 +25,24 @@ const PxtoRem = ({data}) => {
                     body.dark {
                         color: ${color.white} !important;
                         background-color: ${color.dark};
-                        fill: ${color.white}
+                        fill: ${color.white};
                     }
                     @media (min-width: 992px) {
                         body.active {
                             padding-right: 17px;
                         }
                     }
+                    .dark ::selection {
+                        background-color: #fefefe;
+                        color: ${color.dark};
+                 
+                    }
+                    .dark ::-moz-selection {
+                        background-color:#fefefe;
+                        color: ${color.dark};
+                       
+                    }
+                    
                 `}
             </style>
             <Header data={frontmatter}/>

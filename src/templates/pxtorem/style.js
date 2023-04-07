@@ -232,6 +232,13 @@ export const sectionTwo = css`
             }
         }
     }
+    .dark & {
+        article{
+            >span {
+                color: ${color.white}
+            }
+        }
+    }
     ${mq[2]}{
         article {
             padding: 0 15rem;
