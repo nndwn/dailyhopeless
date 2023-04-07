@@ -3,6 +3,7 @@ title : "Menggunakan unit rem pada font-size"
 date: "2023-03-10"
 lang : "id"
 slug : "menggunakan-unit-rem-pada-font-size"
+head : "converter px and rem"
 ---
 
 Pada CSS, banyak unit atau satuan ukuran yang berbeda yang dapat digunakan pada sebuah halaman web
@@ -15,5 +16,6 @@ Dasarnya semua browser modern memiliki nilai ukuran font yang sama yaitu 16px, t
 
 Ukuran 16px pada ukuran font tidak harus menjadi 1 rem , user dapat mengatur ukuran font pada browser mereka tentukan sendiri dan bisa saja menjadi 18px menjadi 1 rem ,  hal ini berhubungan dengan aksesibilitas user.
 
-##Kesimpulan
-Jadi pengembang tidak perlu repot lagi memikirkan ukuran font di berbagai layar penguna karena pada dasarnya rem mengikutin ukuran bawaan pada pengaturan browser. selain itu kita tidak perlu khawatir lagi perubahan ukuran jika font terdapat didalam parent karena ukuran rem berdasarkan root html pada halaman situs. 
+## Kesimpulan
+
+Jadi pengembang tidak perlu repot lagi memikirkan ukuran font di berbagai layar penguna karena pada dasarnya rem mengikutin ukuran bawaan pada pengaturan browser. selain itu kita tidak perlu khawatir lagi perubahan ukuran jika font terdapat didalam parent karena ukuran rem berdasarkan root html pada halaman situs.

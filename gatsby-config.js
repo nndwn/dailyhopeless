@@ -46,7 +46,17 @@ module.exports = {
         ignore: [`**/\.*`], 
       },
     },
-    `gatsby-plugin-mdx`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `pxtorem`,
+        path: `${__dirname}/pxtorem`,
+      },
+    },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {},
+    },
     {
       resolve: `gatsby-transformer-json`,
       options : {

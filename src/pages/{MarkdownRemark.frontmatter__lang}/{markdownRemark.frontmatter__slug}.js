@@ -7,7 +7,8 @@ import Main from "../../templates/pxtorem/content/main";
 import Footer from "../../templates/pxtorem/footer";
 
 const PxtoRem = ({data}) => {
-
+    const { markdownRemark } = data 
+    const { frontmatter, html } = markdownRemark
     return (
         <Layout>
             <style>
@@ -21,31 +22,36 @@ const PxtoRem = ({data}) => {
                     }
                 `}
             </style>
-            <Header data={data.mdx.frontmatter}/>
-            <Main data={data.mdx}/>
+            <Header data={frontmatter}/>
+            <Main data={frontmatter} html={html}/>
             <Footer/>
         </Layout>
     )
 }
 
 
-export const Head = () => (
+export const Head = ({data : {markdownRemark: app}}) => {
+    return(
     <Seo
-        desc="test"
-        keyword="test"
+        desc={app.excerpt}
+        title={app.frontmatter.head}
+        keyword="pixel, rem, converter, generator, px to rem, rem to px"
+        path={app.frontmatter.slug}
+        lang={app.frontmatter.lang}
     />
-)
+)}
 
 export const query = graphql`
-query ($e: String) {
-  mdx (id: {eq: $e}){
+query ($id: String!) {
+    markdownRemark(id: {eq: $id}) {
+    html
     frontmatter {
       date(formatString: "MMMM DD, YYYY")
       lang
       slug
       title
+      head
     }
-    id
     excerpt
   }
 }`

@@ -4,7 +4,7 @@ import Layout from "../components/layout/layout";
 import Seo from "../components/head/seo";
 import Header from "../templates/dailyhopeless/header";
 import Main from "../components/layout/content/main";
-import Footer from "../components/layout/footer/footer";
+import Footer from "../templates/dailyhopeless/footer";
 
 const Lang = ({children, data}) => {
   const [scrollPosition, setScrollPosition] = useState(0)
@@ -83,7 +83,7 @@ const Lang = ({children, data}) => {
         <Layout page={data.lang}>
               <Header data={data.lang} scroll={scrollPosition} />
               <Main data={data.lang} scroll={scrollPosition} />
-              <Footer data={data.lang}/>
+              <Footer/>
             {children}
         </Layout>
     )

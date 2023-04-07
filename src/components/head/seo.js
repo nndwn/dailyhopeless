@@ -40,7 +40,7 @@ const Seo = ({children, title, robots, keyword, desc, lang,language, path}) => {
             {/* twitter seo */}
             <meta name="twitter:card" content="summary_large_image" />
             <meta name="twitter:creator" content="@nndwn" />
-            <link rel="canonical" href={siteUrl+seo.path} />
+            <link rel="canonical" href={`${siteUrl}/${seo.path}`} />
             {children}
         </>
     )

@@ -1,12 +1,11 @@
 import React from "react";
 import Logo from "../../components/layout/logo";
 import Menu, { Currentline } from "../../components/layout/menu";
-import { Navigation, ButtonLanguage, Menulanguage} from "../../components/layout/navigation";
-import { sNav, sNavLogo, sNavMenu, sNavLang } from "./style";
-import { useComponentVisible } from "../../components/layout/button";
+import { Navigation, ButtonLanguage} from "../../components/layout/navigation";
+import { graphql, useStaticQuery } from "gatsby";
+import { sNav, sNavLogo, sNavMenu} from "./style";
 
 const Header = ({data, scroll}) => {
-    const {ref, isComponentVisible, setIsComponentVisible } = useComponentVisible(false)
     return(
         <Navigation
         style={sNav}>
@@ -20,25 +19,31 @@ const Header = ({data, scroll}) => {
                     style={sNavMenu}> 
                     <Currentline/>
                 </Menu>
-                <div ref = {ref} css={sNavLang}>
-                    <ButtonLanguage 
-                        toggle={isComponentVisible} 
-                        set ={setIsComponentVisible} 
+                    <ButtonLanguage
+                        className="language"
+                        data={Datalanguage().map(node => (node.lang))}
                     >
                         <span>
                             {data.lang}
                         </span>
                     </ButtonLanguage>
-                </div>
             </nav>
-            <Menulanguage 
-                toggle={isComponentVisible}
-                right={0}
-            />
         </Navigation>
     )
 }
 
+const Datalanguage = () => {
+    const query =  useStaticQuery(graphql`
+        query {
+            allLang {
+                nodes {
+                lang
+            }
+        }
+        }
+    `)
+    return query.allLang.nodes
+}
 
 
 export default Header

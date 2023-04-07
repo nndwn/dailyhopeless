@@ -1,6 +1,5 @@
 "use strict"
 
-
 exports.createPages = async ({ actions, graphql, reporter }) => {
 
     const { createRedirect, createPage } = actions

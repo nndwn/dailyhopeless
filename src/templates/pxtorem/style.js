@@ -52,6 +52,18 @@ export const sNavEnd = css`
         align-items: center;
         margin-top: 0.375rem;
         cursor: pointer;
+        ul {
+            top: 4.5rem;
+            position: absolute;
+            right: 4rem;
+            list-style: none;
+            background-color: ${color.white};
+            padding: 1rem 1.25rem;
+            text-align: center;
+            border: 1px solid ${color.dark};
+            font-family: anton;
+            text-transform: uppercase;
+        }
     }
     svg {
         fill: ${color.white}
@@ -166,6 +178,43 @@ export const sectionOne = css`
                div:nth-of-type(2) {
                 width: 8.33333333%;
                }
+            }
+        }
+    }
+`
+
+export const sectionTwo = css`
+    article {
+        width: 100%;
+        padding: 0 5rem;
+        margin: 8rem 0;
+        h1 {
+            font-size: 2rem;
+            font-family: anton,sans-serif;
+        }
+        > span {
+            font-size: 0.81rem;
+            color: ${color.dark50}
+        }
+        >div {
+            p {
+                margin: 1rem 0 2rem 0;
+            }
+            h2 {
+                font-family: anton, sans-serif;
+                font-size: 2rem;
+            }
+            pre {
+                list-style: none;
+                margin: 0 0 2rem 2rem;
+            }
+        }
+    }
+    ${mq[2]}{
+        article {
+            padding: 0 15rem;
+            h1 {
+                font-size: 2.5rem;
             }
         }
     }

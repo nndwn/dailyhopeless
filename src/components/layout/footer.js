@@ -1,12 +1,11 @@
 import React from "react";
-import Logo from "../logo";
-import Icons from "../icons";
-import TemplateData from "../../templateData";
+import Icons from "./icons";
+import TemplateData from "../templateData";
 import { css } from "@emotion/react";
 import { graphql, useStaticQuery } from "gatsby";
-import { mq, color } from "../../rootCss";
+import { mq, color } from "../rootCss";
 
-export const Footerr = ({children}) => {
+export const Footerr = ({children, style}) => {
     const {
         title,
         location,
@@ -45,6 +44,7 @@ export const Footerr = ({children}) => {
                 flex-direction: row;
             }
         }
+    ${style}
     `}>
         <div>
             {children}
@@ -113,29 +113,3 @@ export const Socialmedia = () => {
         </ul>
     )
 }
-const Footer = () => {
-    return(
-        <Footerr>
-            <Logo
-                size={35}
-                style={css`
-                    display: flex;
-                    background-color: ${color.yellow};
-                    padding: 0.5rem 1rem;
-                    margin-bottom: 2.5rem;
-                    circle {
-                        fill: ${color.dark};
-                    }
-                    path {
-                        fill: ${color.yellow};
-                    }
-                    h1 {
-                        font-size: 1.5rem;
-                        margin-left: 1rem;
-                    }
-                `}
-            />
-            <Socialmedia/>
-        </Footerr>
-)}
-export default Footer

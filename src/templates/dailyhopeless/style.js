@@ -15,6 +15,49 @@ export const sNav = css`
             display: flex;
             align-items: center;
             padding: 1rem 0;
+            .language {
+                display: flex;
+                justify-content: flex-end;
+                flex: 1 0 0;
+                > div {
+                    display: flex;
+                    align-items: center;
+                    cursor: pointer;
+                    position: relative;
+                ::after {
+                    content: "";
+                    position: absolute;
+                    right: 0;
+                    border-top: 3px solid ${color.white};
+                    border-right: 3px solid transparent;
+                    border-left: 3px solid transparent;
+                }
+                span {
+                    text-transform: uppercase;
+                    font-family: anton;
+                    text-align: center;
+                    font-size: 1.25rem;
+                    padding: 0 1rem 0 0.5rem;
+                    color: ${color.white}; 
+                    user-select: none;
+                }
+                svg {
+                    fill: ${color.white};
+                }
+            }
+            ul {
+                    top: 4.4rem;
+                    position: absolute;
+                    right: 0;
+                    list-style: none;
+                    background-color: ${color.white};
+                    padding: 1rem 1.25rem;
+                    text-align: center;
+                    border: 1px solid ${color.dark};
+                    font-family: anton;
+                    text-transform: uppercase;
+                }
+        }
         }
     }
     ${mq[2]}{
@@ -25,6 +68,21 @@ export const sNav = css`
         opacity: .95;
         header {
             margin: 0 3rem;
+            nav {
+                .language {
+                    & > div {
+                    ::after {
+                        border-top: 3px solid ${color.dark};
+                    }
+                    span {
+                        color: ${color.dark};
+                    }
+                    svg {
+                        fill: ${color.dark};
+                    }
+                    }
+                }
+            }
         }
     }
     ${mx[2]}{
@@ -76,47 +134,25 @@ export const sNavMenu = css`
         }
     }
 `
-export const sNavLang = css`
-        display: flex;
-        justify-content: flex-end;
-        flex: 1 0 0;
-        & > div {
+
+
+export const footer = css`
+    > div {
+        > div {
             display: flex;
-            align-items: center;
-            cursor: pointer;
-            position: relative;
-            ::after {
-                content: "";
-                position: absolute;
-                right: 0;
-                border-top: 3px solid ${color.white};
-                border-right: 3px solid transparent;
-                border-left: 3px solid transparent;
-            }
-            span {
-                text-transform: uppercase;
-                font-family: anton;
-                text-align: center;
-                font-size: 1.25rem;
-                padding: 0 1rem 0 0.5rem;
-                color: ${color.white}; 
-                user-select: none;
-            }
-            svg {
-                fill: ${color.white};
-            }
-        }
-        ${mq[2]}{
-            & > div {
-                ::after {
-                    border-top: 3px solid ${color.dark};
-                }
-                span {
-                    color: ${color.dark};
-                }
-                svg {
+            background-color: ${color.yellow};
+            padding: 0.5rem 1rem;
+            margin-bottom: 2.5rem;
+                circle {
                     fill: ${color.dark};
                 }
-            }
+                path {
+                    fill: ${color.yellow};
+                }
+                h1 {
+                    font-size: 1.5rem;
+                    margin-left: 1rem;
+                }
         }
+    }
 `

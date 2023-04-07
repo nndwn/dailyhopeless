@@ -1,8 +1,8 @@
 import React from "react";
-import { graphql, useStaticQuery, Link} from "gatsby";
+import {Link} from "gatsby";
 import Icons from "./icons";
-import { css } from "@emotion/react";
-import { color } from "../rootCss";
+import { useComponentVisible } from "./button";
+
 
 export const Navigation = ({children, style}) => {
     return(
@@ -13,56 +13,29 @@ export const Navigation = ({children, style}) => {
     </div>
 )}
 
-export const ButtonLanguage = ({toggle, set, children,style}) => {
-
+export const ButtonLanguage = ({ className, size, data, children, link}) => {
+    const {ref,isComponentVisible,setIsComponentVisible } = useComponentVisible(false)
     const show = () => {
-        set(!toggle);
+        setIsComponentVisible(!isComponentVisible);
       };
     return (
-        <div >
+        <div className={className} ref={ref}>
             <div onClick={show} tabIndex={0} onKeyDown={show} role='button'>
             <Icons
                 icon= "language"
-                style={style}
-                size= {25}/>
-               {children}
+                size= {25 || {size} }/>
+                {children}
             </div>
-        </div>
-     
-    )
-}
-
-export const Menulanguage = ({toggle, right}) => {
-    const query = useStaticQuery(graphql`
-        query {
-            allLang {
-                nodes {
-                lang
-                id
-                }
-            }
-        }
-    `)
-    const lang = query.allLang.nodes
-    return (
-        <>
-            {toggle && (
-                <ul css={css`
-                    position: absolute;
-                    right: ${right};
-                    list-style: none;
-                    background-color: ${color.white};
-                    padding: 1rem 1.25rem;
-                    text-align: center;
-                    border: 1px solid ${color.dark};
-                    font-family: anton;
-                    text-transform: uppercase;
-                `}>
-                    {lang.map(node => (
-                        <li key={node.id}><Link to={`/${node.lang}`}>{node.lang}</Link></li>
-                    ))}                            
+            {isComponentVisible && (
+                <ul>
+                {data.map((node, i) => (
+                        <li key={node}>
+                            <Link to={`/${node}/${ link == null ? "" : link[i]}`}>{node}</Link>
+                        </li>
+                    )) } 
                 </ul>
             )}
-        </>
+        </div>
+     
     )
 }
