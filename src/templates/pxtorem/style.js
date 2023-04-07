@@ -134,7 +134,7 @@ export const sectionOne = css`
             }
             .input {
                 span, input {
-                    border: 1px solid ${color.dark20}
+                    border: 1px solid ${color.dark}
                 }
                 span {
                     background-color: ${color.white};
@@ -166,7 +166,7 @@ export const sectionOne = css`
         font-size: 0.81rem;
         align-items: center;
         margin-top: 2rem;
-        color: ${color.dark50};
+        color: ${color.dark80};
         input {
             -webkit-appearance: none;
             border:none;
