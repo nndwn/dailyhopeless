@@ -51,6 +51,9 @@ const Css = ({children}) => (
             input, label {
                 outline: 0;
             }
+            svg {
+                fill: inherit
+            }
         `}/>
         {children}
     </>

@@ -5,6 +5,7 @@ import Header from "../../templates/pxtorem/header";
 import { graphql } from "gatsby";
 import Main from "../../templates/pxtorem/content/main";
 import Footer from "../../templates/pxtorem/footer";
+import { color } from "../../components/rootCss";
 
 const PxtoRem = ({data}) => {
     const { markdownRemark } = data 
@@ -19,6 +20,11 @@ const PxtoRem = ({data}) => {
                     body.active header {
                         margin-right: 1rem;
                        
+                    }
+                    body.dark {
+                        color: ${color.white} !important;
+                        background-color: ${color.dark};
+                        fill: ${color.white}
                     }
                 `}
             </style>
@@ -35,7 +41,7 @@ export const Head = ({data : {markdownRemark: app}}) => {
     <Seo
         desc={app.excerpt}
         title={app.frontmatter.head}
-        keyword="pixel, rem, converter, generator, px to rem, rem to px"
+        keyword="pixel, rem, converter, generator, px to rem, rem to px, pixel to rem, rem to pixel"
         path={app.frontmatter.slug}
         lang={app.frontmatter.lang}
     />

@@ -1,9 +1,10 @@
 import React from "react";
 import { Footerr, Socialmedia } from "../../components/layout/footer";
+import { footerdark } from "./style";
 
 const Footer = () => {
     return (
-        <Footerr>
+        <Footerr style={footerdark}>
             <Socialmedia/>
         </Footerr>
     )

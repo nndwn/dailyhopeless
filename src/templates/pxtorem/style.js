@@ -83,6 +83,7 @@ export const sectionOne = css`
     display: flex;
     justify-content: center;
     align-items: center;
+    
     input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button { 
          -webkit-appearance: none; 
         margin: 0; 
@@ -92,6 +93,17 @@ export const sectionOne = css`
         appearance: textfield;
         margin: 0;
         }
+    .dark & .contain{
+        p {
+            color: ${color.white};
+            input {
+                background-color: transparent;
+            }
+            svg {
+                fill: ${color.white}
+            }
+        }
+    }
     .contain {
         width: 100%;
         margin: 0 5rem;
@@ -102,6 +114,9 @@ export const sectionOne = css`
             font-size: 2.5rem;
             margin-bottom: 1rem;
         }
+        .reverse {
+            flex-direction: column-reverse;
+        }
         > div {
             
             display: flex;
@@ -109,6 +124,7 @@ export const sectionOne = css`
             justify-content: center;
             div:nth-of-type(2) {
                 align-items: center;
+                cursor: pointer;
             }
             > div {
                 width: 100%;
@@ -121,6 +137,7 @@ export const sectionOne = css`
                     border: 1px solid ${color.dark20}
                 }
                 span {
+                    background-color: ${color.white};
                     display: flex;
                     align-items: center;
                     border-left: none;
@@ -130,6 +147,7 @@ export const sectionOne = css`
                     font-size: 2rem;
                     border-top-right-radius: 0.31rem;
                     border-bottom-right-radius: 0.31rem;
+                    color: ${color.dark}
                 }
                 input {
                     flex: 1 1 auto;
@@ -143,8 +161,7 @@ export const sectionOne = css`
                 }
             }
         }
-    }
-    p {
+        p {
         text-align: center; 
         font-size: 0.81rem;
         align-items: center;
@@ -154,7 +171,7 @@ export const sectionOne = css`
             -webkit-appearance: none;
             border:none;
             width: 1.5rem;
-            color: ${color.dark50};
+            color: inherit;
         }
         svg {
             margin-right: 0.5rem;
@@ -162,6 +179,8 @@ export const sectionOne = css`
         }
 
     }
+    }
+
     ${mq[2]} {
         .contain {
             margin: 0 14rem;
@@ -170,6 +189,9 @@ export const sectionOne = css`
             }
             p {
                 margin-top: 3rem;
+            }
+            .reverse {
+                flex-direction: row-reverse;
             }
             >div {
                div:nth-of-type(1),div:nth-of-type(3){
@@ -215,6 +237,22 @@ export const sectionTwo = css`
             padding: 0 15rem;
             h1 {
                 font-size: 2.5rem;
+            }
+        }
+    }
+`
+export const followdark = css`
+    .dark & {
+        background-color: ${color.white}
+    }
+`
+export const footerdark = css`
+    .dark & {
+        > div {
+            footer {
+                > div {
+                    box-shadow: 0 -1px 0 0 ${color.white};
+                }
             }
         }
     }

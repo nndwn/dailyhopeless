@@ -3,7 +3,7 @@ import { scrollfollow, linemove } from "./animation";
 import { css } from "@emotion/react";
 import { color } from "../rootCss";
 
-export const ScrollAnimate = () => {
+export const ScrollAnimate = ({style}) => {
     return (
         <div css= {css`
             display: flex;
@@ -26,6 +26,7 @@ export const ScrollAnimate = () => {
                 background-color: ${color.dark};
                 left: 1rem;
                 animation: ${linemove} .9s ease-in-out infinite;
+                ${style}
             }
         `}>
             <span>scroll</span>

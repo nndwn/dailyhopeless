@@ -1,15 +1,20 @@
 import React from "react";
 import Icons from "../../../components/layout/icons";
-import { sectionOne } from "../style";
+import { sectionOne, followdark } from "../style";
 import { ScrollAnimate } from "../../../components/layout/scrollfollow";
 
 const Converter = () => {
+    const [sw , setSw] = React.useState(false)
     const [size, setSize] = React.useState(16)
     const [rem, setRem] = React.useState(null)
     const [pixel, setPixel] = React.useState(null)
     const remValue = React.useRef(null)
     const pixelValue = React.useRef(null)
     const rootSize = React.useRef(null)
+
+    function swHandle(){
+        setSw(!sw)
+    }
 
     React.useEffect(() => {
         rootSize.current.oninput = event => {
@@ -39,10 +44,10 @@ const Converter = () => {
     return (
         <section css={sectionOne}>
             <div className="contain">
-                <h1>px to rem</h1>
-                <div>
+                <h1>{ sw && true ? `rem to pixel`:`pixel to rem` }</h1>
+                <div className={ sw && true ?"reverse": null}>
                     <Inputfield ref={pixelValue} defaultValue={null} name={"px"} className={"input"} type="number"/>
-                    <div>
+                    <div onClick={swHandle}>
                         <Icons
                             icon={"arrow-left-right"}
                             size= {25}
@@ -60,7 +65,7 @@ const Converter = () => {
             of pixel.
             </p>
             </div>
-            <ScrollAnimate/>
+            <ScrollAnimate style={followdark}/>
         </section>
     )
 }
