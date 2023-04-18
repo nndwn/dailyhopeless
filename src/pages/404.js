@@ -32,7 +32,7 @@ const NotFoundPage = () => {
                         align-items: center;
                         justify-content: center;
                         circle {
-                            fill: var(--white);
+                            fill: ${color.white};
                         }
                         h1 {
                             font-size: 1rem;
