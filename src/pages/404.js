@@ -3,6 +3,7 @@ import Layout from "../components/layout/layout"
 import Seo from "../components/head/seo"
 import Logo from "../components/layout/logo"
 import { css } from "@emotion/react"
+import { color } from "../components/rootCss"
 
 const notfound = css`
     display: flex;
@@ -10,8 +11,8 @@ const notfound = css`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: var(--white);
-    background: var(--dark);
+    color: ${color.white};
+    background: ${color.dark};
     p {
         font-size: 0.8rem;
         margin-bottom: 3rem;

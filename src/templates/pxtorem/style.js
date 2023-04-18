@@ -106,7 +106,7 @@ export const sectionOne = css`
     }
     .contain {
         width: 100%;
-        margin: 0 5rem;
+        margin: 0 3rem;
         h1 {
             text-align: center;
             font-family: anton, sans-serif;
@@ -208,7 +208,7 @@ export const sectionOne = css`
 export const sectionTwo = css`
     article {
         width: 100%;
-        padding: 0 5rem;
+        padding: 0 2rem;
         margin: 8rem 0;
         h1 {
             font-size: 2rem;
@@ -216,7 +216,7 @@ export const sectionTwo = css`
         }
         > span {
             font-size: 0.81rem;
-            color: ${color.dark50}
+            color: ${color.dark80}
         }
         >div {
             p {
