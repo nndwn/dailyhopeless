@@ -68,8 +68,10 @@ const Css = ({children}) => (
 )
 
 const dark = "#131313"
+const white = "#fff"
 export const color = {
-    white : "#fff",
+    white : white,
+    white90 : alpha(white,"90%"),
     dark : dark,
     dark80 : alpha(dark, "80%"),
     dark50 : alpha(dark, "50%"),

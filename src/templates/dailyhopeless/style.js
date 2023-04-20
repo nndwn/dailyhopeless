@@ -61,11 +61,10 @@ export const sNav = css`
         }
     }
     ${mq[2]}{
-        background-color: ${color.white};
+        background-color: ${color.white90};
         position: fixed;
         animation: ${startHeader} 2.5s;
         box-shadow: 0 1px 0 0 ${color.dark20};
-        opacity: .95;
         header {
             margin: 0 3rem;
             nav {
