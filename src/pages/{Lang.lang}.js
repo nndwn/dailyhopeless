@@ -3,7 +3,7 @@ import { graphql} from 'gatsby'
 import Layout from "../components/layout/layout";
 import Seo from "../components/head/seo";
 import Header from "../templates/dailyhopeless/header";
-import Main from "../components/layout/content/main";
+import Main from "../templates/dailyhopeless/content/main";
 import Footer from "../templates/dailyhopeless/footer";
 
 const Lang = ({children, data}) => {

@@ -1,15 +1,15 @@
 import React from "react";
 import { GatsbyImage,getImage } from "gatsby-plugin-image";
 import { css } from "@emotion/react";
-import { mq, mx, color } from "../../rootCss";
-import TemplateData from "../../templateData";
+import { mq, mx, color } from "../../../components/rootCss";
+import TemplateData from "../../../components/templateData";
 import { 
         start, 
         starttext, 
         startTextHeadline,
         startImageHeadline, 
         fade, 
-        startImageMove } from "./keyframeHeadline"
+        startImageMove } from "../animate"
 
 const Headline = ({data, scroll}) => {
     const {title} = TemplateData();
@@ -44,7 +44,7 @@ const Headline = ({data, scroll}) => {
         &.resize > div {
             opacity: 0;
         }
-        &.resize > ul , &.resize > ul:before{
+        &.resize > ul {
             height: 7.5rem;
         }
         ul {
