@@ -1,4 +1,4 @@
-import React, { Fragment} from "react"
+import React from "react"
 import { css } from "@emotion/react";
 import { color } from "../rootCss";
 import { graphql, useStaticQuery } from "gatsby";
@@ -7,11 +7,11 @@ const Menu = ({menu, children, style}) => {
     return(
     <ul css={style}>
         {menu.map(node => (
-            <Fragment key={node.name}>
+            <React.Fragment key={node.name}>
                 <li>
                     <a href={`#${node.link}`}>{node.name}</a>
                 </li>
-            </Fragment>
+            </React.Fragment>
         ))}
         {children}
     </ul>

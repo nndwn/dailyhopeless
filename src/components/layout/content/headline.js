@@ -21,8 +21,7 @@ const Headline = ({data, scroll}) => {
     <section id="mvAreas" className={scroll ? "resize": ""} css={css`
         overflow: hidden;
         height: 31.25rem;
-        margin-bottom: 2rem;
-        position: relative;
+        margin-bottom: 2rem; 
         & > div {
             margin: 0 1rem;
             position: absolute;
@@ -50,7 +49,7 @@ const Headline = ({data, scroll}) => {
         }
         ul {
             overflow: hidden;
-            width: 101%;
+            width: 100%;
             list-style: none;
             position: relative;
             height: 31.25rem;
@@ -58,16 +57,7 @@ const Headline = ({data, scroll}) => {
             top: 50%;
             transform: translate(-50%, -50%);
             transition: all .3s;
-            li {
-                animation: ${fade} 10s linear infinite;
-                position: absolute;
-                opacity: 0;
-                width: 100%;
-                > div {
-                    min-height: 31.25rem;
-                    transition: all .3s;
-                }
-                > div::before {
+            &::before {
                     background-color: ${color.dark50};
                     content: "";
                     display: inline-block;
@@ -78,6 +68,15 @@ const Headline = ({data, scroll}) => {
                     transition: all .3s;
                     width: 100%;
                     z-index: 46;
+                }
+            li {
+                animation: ${fade} 10s linear infinite;
+                position: absolute;
+                opacity: 0;
+                width: 100%;
+                > div {
+                    min-height: 31.25rem;
+                    transition: all .3s;
                 }
             }
             li: last-child {

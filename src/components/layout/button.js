@@ -1,4 +1,4 @@
-import React, {useState, useEffect, useRef} from "react";
+import React from "react";
 import Icons from "./icons";
 import { css } from "@emotion/react";
 import { color } from "../rootCss";
@@ -68,8 +68,8 @@ const Button = ({name, pop, icon, link, iconsize}) => {
 )}
 
 export function useComponentVisible(initialIsVisible) {
-    const [isComponentVisible, setIsComponentVisible] = useState(initialIsVisible);
-    const ref = useRef(null);
+    const [isComponentVisible, setIsComponentVisible] = React.useState(initialIsVisible);
+    const ref = React.useRef(null);
 
     const handleClickOutside = (event) => {
         if (ref.current && !ref.current.contains(event.target)) {
@@ -77,7 +77,7 @@ export function useComponentVisible(initialIsVisible) {
         }
     };
 
-    useEffect(() => {
+    React.useEffect(() => {
         document.addEventListener('click', handleClickOutside, true);
         return () => {
             document.removeEventListener('click', handleClickOutside, true);
