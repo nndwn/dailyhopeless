@@ -21,7 +21,8 @@ const Headline = ({data, scroll}) => {
     <section id="mvAreas" className={scroll ? "resize": ""} css={css`
         overflow: hidden;
         height: 31.25rem;
-        margin-bottom: 2rem; 
+        margin-bottom: 2rem;
+        position: relative; 
         & > div {
             margin: 0 1rem;
             position: absolute;
@@ -146,7 +147,7 @@ const Headline = ({data, scroll}) => {
         }
         ${mx[2]}{
             & > div {
-                bottom: 4.9rem;
+                bottom: 0;
             }
         }
     `}>

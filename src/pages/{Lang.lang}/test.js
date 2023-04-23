@@ -1,9 +1,5 @@
-import React,{useRef, useState, useEffect} from "react";
-import Menu from "../../components/layout/menu";
+import React,{useRef, useState} from "react";
 import { graphql } from "gatsby";
-import Darkmode from "../../components/layout/darkmode";
-import { css } from "@emotion/react";
-import { UseDarkmode } from "../../components/layout/darkmode";
 import Seo from "../../components/head/seo";
 
 
