@@ -8,13 +8,13 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
         redirectInBrowser: true,
         toPath: `/en/`,
       })
-      createRedirect({
-        fromPath: `/`,
-        redirectInBrowser: true,
-        toPath: `/id/`,
-        conditions: {
-          country: [`id`],
-          language: [`id`]
-        }
-      })
+      // createRedirect({
+      //   fromPath: `/`,
+      //   redirectInBrowser: true,
+      //   toPath: `/id/`,
+      //   conditions: {
+      //     country: [`id`],
+      //     language: [`id`]
+      //   }
+      // })
 }
