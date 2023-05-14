@@ -1,14 +1,14 @@
 import React from "react";
-import { Navigation, ButtonLanguage} from "../../components/layout/navigation";
+import { Navigation, ButtonLanguage} from "../../components/navigation";
 import { sNav, sNavLogo, sNavEnd} from "./style";
-import Logo from "../../components/layout/logo";
-import Darkmode from "../../components/layout/darkmode";
-import { Outmenu } from "../../components/layout/outmenu";
-import { Datamenu } from "../../components/layout/menu";
+import Logo from "../../components/logo";
+import Darkmode from "../../components/darkmode";
+import { Outmenu } from "../../components/outmenu";
+import Data from "../../components/Data";
 import { graphql, useStaticQuery } from "gatsby";
 
 const Header = ({data}) => {
-    const { menu } = Datamenu()[1]
+    const menu  = Data().second.map(node => (node.menu))
     const link = DataLanguage().map(node => (node.frontmatter))
     const lang = link.map(node => (node.lang))
     const slug = link.map(node => (node.slug))
@@ -27,7 +27,7 @@ const Header = ({data}) => {
                         link={slug}
                     />
                     <Outmenu 
-                        menu={menu}
+                        menu={menu[0]}
                         lang={data.lang}
                     />
                 </div>

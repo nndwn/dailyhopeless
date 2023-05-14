@@ -1,7 +1,7 @@
 import React from "react";
 import { scrollfollow, linemove } from "./animation";
 import { css } from "@emotion/react";
-import { color } from "../rootCss";
+import { color } from "./rootCss";
 
 export const ScrollAnimate = ({style}) => {
     return (

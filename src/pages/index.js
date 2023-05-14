@@ -1,17 +1,27 @@
-import * as React from "react"
-import Seo from "../components/head/seo"
+import React from "react"
+import Template from "../templates/dailyhopeless/template"
+import Seo from "../components/seo"
+import Data from "../components/Data"
+
 
 const IndexPage = () => {
   return (
-    <div></div>
+    <Template data={Data()} />
   )
 }
 
 export default IndexPage
 
-export const Head = () => (
-  <Seo
-    keyword="developer website, create website, sell theme template,ui design, blog, create ecommerce, website design"
-    desc="Create your website look professional, elegant, and responsive. We are indie developers with daily hopeless."
-  />
-)
+export const Head = () => {
+  return(
+    <>
+      <Seo 
+        desc= {Data().second[0].description}
+        keyword ={Data().second[0].keyword}
+        lang = {Data().second[0].lang}
+        language = {Data().second[0].language}
+        />
+    </>
+   
+  )
+}

@@ -12,6 +12,7 @@ export const startHeader = keyframes`
         transform: translateY(0);
         }
 `
+
 export const start = keyframes`
     0% {
         opacity: 1;

@@ -1,15 +1,15 @@
 import React from "react";
 import { css } from "@emotion/react";
-import { color } from "../rootCss";
+import { color } from "./rootCss";
 import Logo from "./logo";
 import { menuListAni } from "./animation";
-import TemplateData from "../templateData";
+import Data from "./Data";
 import { useComponentVisible } from "./button";
 
 
 export const Outmenu =  ({menu, lang}) => {
     const {ref, isComponentVisible, setIsComponentVisible } = useComponentVisible(false)
-    const {siteUrl} = TemplateData()
+    const {siteUrl} = Data()
     function burgerAktive(){
         setIsComponentVisible(!isComponentVisible)
     }

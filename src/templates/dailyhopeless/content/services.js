@@ -1,14 +1,14 @@
 import React from "react";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
-import Button from "../../../components/layout/button";
-import Icons from "../../../components/layout/icons";
+import Button from "../../../components/button";
+import Icons from "../../../components/icons";
 import { servicec } from "../style";
 
 
 const Services = ({data}) => {
     return (
         <section id="services" css={servicec}>
-        {data.services.map((node, index) =>{
+        {data[0].services.map((node, index) =>{
             let oddevent =  index % 2 === 0 
             return (
             <div className={oddevent ?"odd": "even" } key={node.title}>
@@ -20,8 +20,8 @@ const Services = ({data}) => {
                                 <p>{node.description}</p>
                             </div>
                             <Button 
-                                name={data.textbutton}
-                                pop ={data.popbutton}
+                                name={data[0].textbutton}
+                                pop ={data[0].popbutton}
                                 icon = "more"
                                 link = {node.link}
                                 iconsize= {16}

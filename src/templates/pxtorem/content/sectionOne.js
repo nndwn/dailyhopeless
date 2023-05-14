@@ -1,7 +1,7 @@
 import React from "react";
-import Icons from "../../../components/layout/icons";
+import Icons from "../../../components/icons";
 import { sectionOne, followdark } from "../style";
-import { ScrollAnimate } from "../../../components/layout/scrollfollow";
+import { ScrollAnimate } from "../../../components/scrollfollow";
 
 const Converter = () => {
     const [sw , setSw] = React.useState(false)

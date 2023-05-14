@@ -1,12 +1,10 @@
 import React from "react";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
-import TemplateData from "../../../components/templateData";
-import Button from "../../../components/layout/button";
+import Button from "../../../components/button";
 import { contactc } from "../style";
 
-const Contact = ({data}) => {
-    const contact = data.contact[0]
-    const email = TemplateData().email
+const Contact = ({data, email}) => {
+    const contact = data[0].contact[0]
     return (
         <section id="contact" css={contactc}>
             <div>

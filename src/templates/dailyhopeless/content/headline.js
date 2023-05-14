@@ -2,7 +2,6 @@ import React from "react";
 import { GatsbyImage,getImage } from "gatsby-plugin-image";
 import { css } from "@emotion/react";
 import { mq, mx, color } from "../../../components/rootCss";
-import TemplateData from "../../../components/templateData";
 import { 
         start, 
         starttext, 
@@ -11,10 +10,10 @@ import {
         fade, 
         startImageMove } from "../animate"
 
-const Headline = ({data, scroll}) => {
-    const {title} = TemplateData();
-    const h1 = data.headline[0].h1
-    const text = data.headline[0].h2.split(' ')
+const Headline = ({title, data, scroll}) => {
+    
+    const h1 = data[0].headline.map(node => node.h1 )
+    const text = data[0].headline.map(node => node.h2)[0].split(' ')
     const last = text.pop()
     const h2 = text.join(' ')
     return(
@@ -22,7 +21,7 @@ const Headline = ({data, scroll}) => {
         overflow: hidden;
         height: 31.25rem;
         margin-bottom: 2rem;
-        position: relative; 
+        position: relative;
         & > div {
             margin: 0 1rem;
             position: absolute;
@@ -156,7 +155,7 @@ const Headline = ({data, scroll}) => {
             <h3>{h2}<span> {last}</span></h3>
         </div>
         <ul >
-            {data.slide.map(node => (
+            {data[0].slide.map(node => (
                     <li key={node.alt}>
                         <GatsbyImage
                             image={getImage(node.image)}

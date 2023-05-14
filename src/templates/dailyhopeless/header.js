@@ -1,11 +1,11 @@
 import React from "react";
-import Logo from "../../components/layout/logo";
-import Menu, { Currentline } from "../../components/layout/menu";
-import { Navigation, ButtonLanguage} from "../../components/layout/navigation";
-import { graphql, useStaticQuery } from "gatsby";
+import Logo from "../../components/logo";
+import Menu, { Currentline } from "../../components/menu";
+import { Navigation} from "../../components/navigation";
 import { sNav, sNavLogo, sNavMenu} from "./style";
 
-const Header = ({data, scroll}) => {
+
+const Header = ({data,scroll}) => {
     return(
         <Navigation
         style={sNav}>
@@ -14,36 +14,26 @@ const Header = ({data, scroll}) => {
                     size= {35}
                     style= {sNavLogo}
                 />
-                <Menu 
-                    menu={data.menu}
-                    style={sNavMenu}> 
-                    <Currentline/>
-                </Menu>
-                    <ButtonLanguage
+                <div className="menu">
+                    <Menu 
+                        menu={data.second.map(node => (node.menu))}
+                        style={sNavMenu}> 
+                        <Currentline/>
+                    </Menu>
+                </div>
+                    {/* <ButtonLanguage
                         className="language"
-                        data={Datalanguage().map(node => (node.lang))}
+                        data={Data().second.map(node => (node.lang))}
                     >
                         <span>
                             {data.lang}
                         </span>
-                    </ButtonLanguage>
+                    </ButtonLanguage> */}
             </nav>
         </Navigation>
     )
 }
 
-const Datalanguage = () => {
-    const query =  useStaticQuery(graphql`
-        query {
-            allLang {
-                nodes {
-                lang
-            }
-        }
-        }
-    `)
-    return query.allLang.nodes
-}
 
 
 export default Header

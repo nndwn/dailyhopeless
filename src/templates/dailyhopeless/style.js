@@ -1,6 +1,8 @@
 import { css } from "@emotion/react";
 import { mq, mx, color } from "../../components/rootCss";
-import { startHeader } from "./animate";
+import { startHeader } from "./animate"
+
+
 
 // header
 export const sNav = css`
@@ -15,49 +17,8 @@ export const sNav = css`
             display: flex;
             align-items: center;
             padding: 1rem 0;
-            .language {
-                display: flex;
-                justify-content: flex-end;
-                flex: 1 0 0;
-                > div {
-                    display: flex;
-                    align-items: center;
-                    cursor: pointer;
-                    position: relative;
-                ::after {
-                    content: "";
-                    position: absolute;
-                    right: 0;
-                    border-top: 3px solid ${color.white};
-                    border-right: 3px solid transparent;
-                    border-left: 3px solid transparent;
-                }
-                span {
-                    text-transform: uppercase;
-                    font-family: anton;
-                    text-align: center;
-                    font-size: 1.25rem;
-                    padding: 0 1rem 0 0.5rem;
-                    color: ${color.white}; 
-                    user-select: none;
-                }
-                svg {
-                    fill: ${color.white};
-                }
-            }
-            ul {
-                    top: 4.4rem;
-                    position: absolute;
-                    right: 0;
-                    list-style: none;
-                    background-color: ${color.white};
-                    padding: 1rem 1.25rem;
-                    text-align: center;
-                    border: 1px solid ${color.dark};
-                    font-family: anton;
-                    text-transform: uppercase;
-                }
-        }
+ 
+            
         }
     }
     ${mq[2]}{
@@ -68,18 +29,12 @@ export const sNav = css`
         header {
             margin: 0 3rem;
             nav {
-                .language {
-                    & > div {
-                    ::after {
-                        border-top: 3px solid ${color.dark};
-                    }
-                    span {
-                        color: ${color.dark};
-                    }
-                    svg {
-                        fill: ${color.dark};
-                    }
-                    }
+                > .menu {
+                display: flex;
+                justify-content: center;
+                position: absolute;
+                width: 100%;
+                
                 }
             }
         }

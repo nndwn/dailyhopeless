@@ -1,7 +1,7 @@
 import * as React from "react"
-import Layout from "../components/layout/layout"
-import Seo from "../components/head/seo"
-import Logo from "../components/layout/logo"
+import Layout from "../components/layout"
+import Seo from "../components/seo"
+import Logo from "../components/logo"
 import { css } from "@emotion/react"
 import { color } from "../components/rootCss"
 

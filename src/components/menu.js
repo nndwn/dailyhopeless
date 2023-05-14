@@ -1,17 +1,16 @@
-import React from "react"
+import React,{Fragment} from "react"
 import { css } from "@emotion/react";
-import { color } from "../rootCss";
-import { graphql, useStaticQuery } from "gatsby";
+import { color } from "./rootCss";
 
 const Menu = ({menu, children, style}) => {
     return(
     <ul css={style}>
-        {menu.map(node => (
-            <React.Fragment key={node.name}>
+        {menu[0].map(node => (
+            <Fragment key={node.name}>
                 <li>
                     <a href={`#${node.link}`}>{node.name}</a>
                 </li>
-            </React.Fragment>
+            </Fragment>
         ))}
         {children}
     </ul>
@@ -27,20 +26,6 @@ export const Currentline = () => (
     `}></li>
 ) 
 
-export const Datamenu = () => {
-    const query = useStaticQuery(graphql`
-        query {
-            allLang {
-                nodes {
-                    menu {
-                    link
-                    name
-                    }
-                }
-            }
-        }
-    `)
-    return query.allLang.nodes
-}
+
 
 export default Menu

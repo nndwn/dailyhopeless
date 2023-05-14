@@ -1,8 +1,8 @@
 import React from "react";
 import Icons from "./icons";
 import { css } from "@emotion/react";
-import { color } from "../rootCss";
-import { firstLetter } from "../utils";
+import { color } from "./rootCss";
+import { firstLetter } from "./utils";
 
 const Button = ({name, pop, icon, link, iconsize}) => {
     const { ref, isComponentVisible, setIsComponentVisible } = useComponentVisible(false);

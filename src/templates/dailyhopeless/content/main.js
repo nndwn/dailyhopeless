@@ -1,19 +1,22 @@
 import React from "react";
 import Headline from "./headline";
 import About from "./about";
-import Services from "./services";
 import NavMobile from "./navmobile";
+import Services from "./services";
 import Contact from "./contact";
 
 
 const Main =({data, scroll}) => {
     return(
     <main >
-        <Headline data={data} scroll={scroll}/>
-        <About data={data} scroll={scroll}/>
-        <NavMobile data={data}/>
-        <Services data={data}/>
-        <Contact data={data}/>
+        <Headline 
+            data={data.second} 
+            title={data.primary.title} 
+            scroll={scroll}/>
+        <About data={data.second} scroll={scroll}/>
+        <NavMobile data={data.second.map(node => (node.menu))}/>
+        <Services data={data.second}/>
+        <Contact data={data.second} email={data.primary.email}/>
     </main>
 )}
 
