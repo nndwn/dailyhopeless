@@ -31,7 +31,7 @@ module.exports = {
     ]
   },
   flags: {
-    DEV_SSR: true
+    DEV_SSR: false
   },
   plugins: [
     
