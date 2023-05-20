@@ -99,8 +99,17 @@ module.exports = {
       resolve: 'gatsby-plugin-manifest',
       options: {
           icon: 'src/images/icon.png',
+          cache_busting_mode: 'none'
       }
    },
+   {
+    resolve: 'gatsby-plugin-offline',
+    options: {
+       workboxConfig: {
+          globPatterns: ['**/icon-path*']
+       }
+    }
+ },
   {
     resolve: `gatsby-plugin-emotion`,
     options: {
@@ -110,5 +119,6 @@ module.exports = {
       cssPropOptimization: true,
     },
   },
+  
 ],
 };

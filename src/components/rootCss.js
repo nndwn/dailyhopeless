@@ -75,8 +75,10 @@ export const color = {
     dark : dark,
     dark80 : alpha(dark, "80%"),
     dark50 : alpha(dark, "50%"),
+    dark40 : alpha(dark, "40%"),
     dark20 : alpha(dark,"20%"),
-    yellow : "#FFD400"
+    yellow : "#FFD400",
+    darkyellow : "#ffaa00"
 }
 const breakpoints = [576, 768, 992, 1200]
 const breakpointsmax = [575, 767, 991, 1199]

@@ -154,6 +154,7 @@ export const contactc = css`
         .image {
         
             &::before {
+                backdrop-filter: saturate(180%) blur(2px);
                 background: ${color.dark50};
                 content: "";
                 display: inline-block;

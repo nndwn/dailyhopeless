@@ -7,7 +7,7 @@ import Data from "./Data";
 import { useComponentVisible } from "./button";
 
 
-export const Outmenu =  ({menu, lang}) => {
+export const Outmenu =  ({menu, lang, children}) => {
     const {ref, isComponentVisible, setIsComponentVisible } = useComponentVisible(false)
     const {siteUrl} = Data()
     function burgerAktive(){
@@ -82,7 +82,8 @@ export const Outmenu =  ({menu, lang}) => {
             `}>
                 <div>
                     <ul id = "animate">
-                        {menu.map((node)=> {
+                        {children}
+                        {menu == null ? "" : menu.map((node)=> {
                             return(
                             <React.Fragment key={node.name}>
                                 <li >
