@@ -1,9 +1,9 @@
 ---
-title : "Using rem unit on font-size"
+title : "px to rem"
 date : "2023-03-10"
 lang: "en"
 slug : "using-rem-unit-on-font-size"
-head : "converter px and rem "
+head : "px-to-rem"
 ---
 
 In CSS, there are many different units of measurement that can be used on a web page, such as px, vw, ch, em, rem, and others, but out of all these units, only the rem unit is suitable for setting font sizes in a responsive manner. Rem stands for "root em" and allows for responsive text styling based on the root HTML of a browser, meaning that this unit can adapt to the default font size of the browser.

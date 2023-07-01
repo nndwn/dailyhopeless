@@ -3,24 +3,23 @@ import Layout from "../../components/layout";
 import Seo from "../../components/seo";
 import Header from "../../templates/pxtorem/header";
 import { graphql } from "gatsby";
-import Main from "../../templates/pxtorem/content/main";
+import Main from "../../templates/privacy/content/main";
 import Footer from "../../templates/pxtorem/footer";
 import { color } from "../../components/rootCss";
 
-const PxtoRem = ({data}) => {
-    const { markdownRemark } = data 
-    const { frontmatter, html } = markdownRemark
+const Privacy = ({data}) => {
+    const { markdownRemark } = data
+    const {frontmatter, html} = markdownRemark
     return (
         <Layout>
             <style>
                 {`
                     body.active {
                         overflow: hidden;
-                   
                     }
                     body.active header {
                         margin-right: 1rem;
-                       
+                        
                     }
                     body.dark {
                         color: ${color.white} !important;
@@ -35,14 +34,13 @@ const PxtoRem = ({data}) => {
                     .dark ::selection {
                         background-color: #fefefe;
                         color: ${color.dark};
-                 
+                    
                     }
                     .dark ::-moz-selection {
                         background-color:#fefefe;
                         color: ${color.dark};
-                       
+                        
                     }
-                    
                 `}
             </style>
             <Header data={frontmatter}/>
@@ -51,32 +49,32 @@ const PxtoRem = ({data}) => {
         </Layout>
     )
 }
-
-
-export const Head = ({data : {markdownRemark: app}}) => {
-    return(
-    <Seo
-        desc={app.excerpt}
-        title={app.frontmatter.head}
-        keyword="pixel, rem, converter, generator, px to rem, rem to px, pixel to rem, rem to pixel"
-        path={app.frontmatter.slug}
-        lang={app.frontmatter.lang}
-    />
-)}
+export const Head =({data: {markdownRemark: app}}) => {
+    return (
+        <Seo
+            desc={app.excerpt}
+            title={app.frontmatter.title || app.frontmatter.category}
+            keyword={"privacy policy, game, baloks"}
+            path={app.frontmatter.slug}
+            lang= {"en"}
+        />
+    )
+}
 
 export const query = graphql`
-query ($id: String!) {
-    markdownRemark(id: {eq: $id}) {
-    html
-    frontmatter {
-      date(formatString: "MMMM DD, YYYY")
-      lang
-      slug
-      title
-      head
+    query ($id: String!) {
+        markdownRemark(id: {eq: $id}) {
+        html
+        frontmatter {
+        date(formatString: "MMMM DD, YYYY")
+        category
+        slug
+        title
+        head
+        }
+        excerpt(pruneLength: 125)
     }
-    excerpt
-  }
 }`
 
-export default PxtoRem
+
+export default Privacy;

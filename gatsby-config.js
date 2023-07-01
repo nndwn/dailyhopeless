@@ -84,6 +84,13 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `privacy`,
+        path: `${__dirname}/privacy`,
+      },
+    },
+    {
       resolve: `gatsby-transformer-remark`,
       options: {},
     },
