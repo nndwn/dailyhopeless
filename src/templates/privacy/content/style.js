@@ -12,6 +12,7 @@ export const bodyArticle = css`
         ul {
             padding-left: 3rem;
         }
+        
         h1 {
             font-size: 2rem;
             font-family: anton, sans-serif;
