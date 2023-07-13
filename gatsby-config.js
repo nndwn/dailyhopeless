@@ -9,7 +9,7 @@ module.exports = {
     "location": "batam",
     "country": "indonesia",
     "email": "dailyhopeless.dev@gmail.com",
-    "author": "nndwn",
+    "author": "Nandawan Libya",
     "banner": "/dailyhopeless.jpg",
     "socialmedia": [
       {
