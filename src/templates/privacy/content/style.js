@@ -6,7 +6,7 @@ export const bodyArticle = css`
     article {
         width: 100%;
         padding : 0 2rem;
-        div {
+        > div {
             padding-top: 7rem;
         }
         ul {

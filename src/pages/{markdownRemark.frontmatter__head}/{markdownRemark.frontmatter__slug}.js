@@ -54,7 +54,7 @@ export const Head =({data: {markdownRemark: app}}) => {
         <Seo
             desc={app.excerpt}
             title={app.frontmatter.title || app.frontmatter.category}
-            keyword={"privacy policy, game, baloks"}
+            keyword={app.frontmatter.keyword}
             path={app.frontmatter.slug}
             lang= {"en"}
         />

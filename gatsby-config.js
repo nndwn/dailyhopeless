@@ -91,8 +91,23 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `blog`,
+        path: `${__dirname}/blog`,
+      },
+    },
+    {
       resolve: `gatsby-transformer-remark`,
-      options: {},
+      options: {
+        plugins: [{
+          resolve: `gatsby-remark-prismjs`,
+          options:{
+            
+          }    
+        },
+      ]
+      },
     },
     {
       resolve: `gatsby-transformer-json`,

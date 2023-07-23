@@ -4,6 +4,7 @@ date : "2023-07-02"
 category: "privacy policy"
 slug : "privacy-policy"
 head : "baloks"
+keyword: "privacy policy, game, baloks"
 ---
 
 
