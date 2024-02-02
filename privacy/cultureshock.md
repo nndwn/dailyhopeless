@@ -2,7 +2,7 @@
 title : "Culture Shock"
 date : "2023-07-02"
 category: "privacy policy"
-slug : "privacy-policy"
+slug : ""
 head : "privacy"
 keyword: "privacy policy, game, cultureshock"
 ---
@@ -10,13 +10,13 @@ keyword: "privacy policy, game, cultureshock"
 
 # Privacy Policy
 
-Dailyhopeless built the Culture Shock Game app as a Free app. This SERVICE is provided by Dailyhopeless at no cost and is intended for use as is.
+Dailyhopeless built  Game app . This SERVICE is provided by Dailyhopeless at no cost and is intended for use as is.
 
 This page is used to inform visitors regarding my policies with the collection, use, and disclosure of Personal Information if anyone decided to use my Service.
 
 If you choose to use my Service, then you agree to the collection and use of information in relation to this policy. The Personal Information that I collect is used for providing and improving the Service. I will not use or share your information with anyone except as described in this Privacy Policy.
 
-The terms used in this Privacy Policy have the same meanings as in our Terms and Conditions, which are accessible at Culture Shock Game unless otherwise defined in this Privacy Policy.
+The terms used in this Privacy Policy have the same meanings as in our Terms and Conditions, which are accessible at Game unless otherwise defined in this Privacy Policy.
 
 ## Information Collection and Use
 
